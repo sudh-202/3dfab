@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local scan roots contain machine paths; keep the example, ignore the real one.
+/scripts/roots.json

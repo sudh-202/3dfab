@@ -5,7 +5,7 @@ import { bytes, count, exact, relativeDate } from "@/lib/format";
 
 export const metadata = {
   title: "Overview — 3DFAB",
-  description: "Where the triangles and the disk space actually went.",
+  description: "Where the triangles and the file size actually went.",
 };
 
 /* Decade buckets on the same log scale the card meters use. */
@@ -52,11 +52,11 @@ export default function Overview() {
     }, {})
   ).sort((a, b) => b[1].n - a[1].n);
 
-  const duplicated = models.filter((m) => m.duplicates.length > 0);
-  const wastedBytes = duplicated.reduce((s, m) => s + m.bytes * m.duplicates.length, 0);
+  const duplicated = models.filter((m) => m.duplicateCount > 0);
+  const wastedBytes = duplicated.reduce((s, m) => s + m.bytes * m.duplicateCount, 0);
 
   return (
-    <main className="mx-auto max-w-[1600px] px-4 py-10 sm:px-6">
+    <main className="mx-auto max-w-[1440px] px-5 py-12 sm:px-8">
       <header className="mb-10 max-w-2xl">
         <p className="label mb-4">Overview</p>
         <h1 className="display text-[clamp(2rem,5vw,3.25rem)]">
@@ -70,7 +70,7 @@ export default function Overview() {
 
       <div className="grid gap-4 lg:grid-cols-3">
         {/* Histogram — the shape of the library in one read. */}
-        <section className="rounded-md border border-line-soft bg-panel p-5 lg:col-span-2">
+        <section className="rounded-xl border border-line-soft bg-panel p-6 lg:col-span-2">
           <h2 className="label mb-1">Triangle distribution</h2>
           <p className="mb-6 text-[12.5px] text-faint">
             {counted.length} models with a parsed triangle count.
@@ -109,7 +109,7 @@ export default function Overview() {
           </div>
         </section>
 
-        <section className="rounded-md border border-line-soft bg-panel p-5">
+        <section className="rounded-xl border border-line-soft bg-panel p-6">
           <h2 className="label mb-4">By project</h2>
           <ul className="space-y-4">
             {collections.map((c) => {
@@ -129,7 +129,7 @@ export default function Overview() {
                     />
                   </div>
                   <p className="num mt-1 text-[10.5px] text-faint">
-                    {count(c.triangles)} tris · {(share * 100).toFixed(0)}% of disk
+                    {count(c.triangles)} tris · {(share * 100).toFixed(0)}% of total
                   </p>
                 </li>
               );
@@ -171,14 +171,14 @@ export default function Overview() {
       </div>
 
       <div className="mt-4 grid gap-4 md:grid-cols-2">
-        <section className="rounded-md border border-line-soft bg-panel p-5">
+        <section className="rounded-xl border border-line-soft bg-panel p-6">
           <h2 className="label mb-4">Formats</h2>
           <table className="w-full text-left text-[13px]">
             <thead>
               <tr className="label border-b border-line-soft">
                 <th className="py-2 font-normal">Format</th>
                 <th className="py-2 text-right font-normal">Files</th>
-                <th className="py-2 text-right font-normal">On disk</th>
+                <th className="py-2 text-right font-normal">Size</th>
                 <th className="py-2 text-right font-normal">Viewable</th>
               </tr>
             </thead>
@@ -200,14 +200,14 @@ export default function Overview() {
           </table>
         </section>
 
-        <section className="rounded-md border border-line-soft bg-panel p-5">
-          <h2 className="label mb-1">Duplicates</h2>
+        <section className="rounded-xl border border-line-soft bg-panel p-6">
+          <h2 className="label mb-1">Identical copies</h2>
           <p className="mb-5 text-[12.5px] text-faint">
-            Byte-identical files kept in more than one place.
+            The same file exported more than once. Each is indexed one time.
           </p>
 
           {duplicated.length === 0 ? (
-            <p className="text-[13px] text-dim">No duplicate files found.</p>
+            <p className="text-[13px] text-dim">Every file in the library is unique.</p>
           ) : (
             <>
               <div className="mb-5 flex flex-wrap gap-x-10 gap-y-4">
@@ -220,7 +220,7 @@ export default function Overview() {
                   <p className="num text-2xl leading-none text-ink">{totals.duplicates}</p>
                 </div>
                 <div>
-                  <p className="label mb-1.5">reclaimable</p>
+                  <p className="label mb-1.5">redundant size</p>
                   <p className="num text-2xl leading-none text-sel">{bytes(wastedBytes)}</p>
                 </div>
               </div>
@@ -233,7 +233,7 @@ export default function Overview() {
                     >
                       <span className="truncate text-dim">{m.name}</span>
                       <span className="num shrink-0 text-[11px] text-faint">
-                        ×{m.duplicates.length + 1} · {bytes(m.bytes)}
+                        ×{m.duplicateCount + 1} · {bytes(m.bytes)}
                       </span>
                     </Link>
                   </li>
@@ -244,7 +244,7 @@ export default function Overview() {
         </section>
       </div>
 
-      <section className="mt-4 rounded-md border border-line-soft bg-panel p-5">
+      <section className="mt-4 rounded-xl border border-line-soft bg-panel p-6">
         <h2 className="label mb-4">Index coverage</h2>
         <div className="flex flex-wrap gap-x-12 gap-y-5">
           <Fact k="Files indexed" v={exact(totals.models)} />
@@ -254,9 +254,8 @@ export default function Overview() {
           <Fact k="Total vertices" v={count(totals.vertices)} />
         </div>
         <p className="mt-5 max-w-2xl border-t border-line-soft pt-4 text-[12.5px] leading-relaxed text-faint">
-          FBX and .blend files are read from their headers only — a full parse would not change what
-          you can do with them here. Files above the bundle size cap stay indexed but are not copied
-          into the deployment, so they show specs without a viewer.
+          FBX and .blend files are read from their headers only. Files above the preview size cap
+          stay indexed but are not viewable here, so they show specs without a viewer.
         </p>
       </section>
     </main>
@@ -273,7 +272,7 @@ function Ranked({
   rows: { id: string; name: string; meta: string; value: string }[];
 }) {
   return (
-    <section className="rounded-md border border-line-soft bg-panel p-5">
+    <section className="rounded-xl border border-line-soft bg-panel p-6">
       <h2 className="label mb-1">{title}</h2>
       {note && <p className="mb-4 text-[12.5px] text-faint">{note}</p>}
       <ol className="space-y-px">

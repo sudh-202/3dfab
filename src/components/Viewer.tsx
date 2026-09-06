@@ -11,6 +11,7 @@
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Center, Grid, OrbitControls, useAnimations, useGLTF } from "@react-three/drei";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
+import { clone as cloneSkeleton } from "three/examples/jsm/utils/SkeletonUtils.js";
 import { Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 
@@ -65,8 +66,10 @@ function Model({
   const checker = useCheckerTexture();
 
   // useGLTF caches per URL, so a fresh graph per mount keeps two viewers from
-  // fighting over the same materials.
-  const scene = useMemo(() => gltf.scene.clone(true), [gltf.scene]);
+  // fighting over the same materials. A plain clone() leaves skinned meshes
+  // bound to the cached skeleton, so clips would drive bones nobody renders;
+  // SkeletonUtils rebinds skins to the copied bones.
+  const scene = useMemo(() => cloneSkeleton(gltf.scene) as THREE.Group, [gltf.scene]);
   const group = useRef<THREE.Group>(null);
   const { actions, mixer } = useAnimations(gltf.animations, group);
 
@@ -79,7 +82,14 @@ function Model({
     });
     original.current = map;
 
-    const box = new THREE.Box3().setFromObject(scene);
+    // Skinned meshes only have meaningful bounds once their bones are posed,
+    // and only the precise path walks skinned vertices. <Center> measures the
+    // same way, so camera distance and centring agree.
+    scene.updateMatrixWorld(true);
+    scene.traverse((o) => {
+      if ((o as THREE.SkinnedMesh).isSkinnedMesh) (o as THREE.SkinnedMesh).skeleton.update();
+    });
+    const box = new THREE.Box3().setFromObject(scene, true);
     onScene({
       clips: gltf.animations.map((a) => a.name),
       radius: Math.max(box.getSize(new THREE.Vector3()).length() / 2, 0.001),
@@ -191,12 +201,29 @@ function Turntable({ on, children }: { on: boolean; children: React.ReactNode })
 function Loading() {
   return (
     <div className="absolute inset-0 grid place-items-center">
-      <p className="label animate-pulse">Loading mesh…</p>
+      <p className="label animate-pulse">Loading model…</p>
     </div>
   );
 }
 
+/** Reads a CSS variable off <html> and re-reads it when the theme flips. */
+function useThemeVar(name: string, fallback: string) {
+  const [value, setValue] = useState(fallback);
+  useEffect(() => {
+    const read = () =>
+      setValue(getComputedStyle(document.documentElement).getPropertyValue(name).trim() || fallback);
+    read();
+    const mo = new MutationObserver(read);
+    mo.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+    return () => mo.disconnect();
+  }, [name, fallback]);
+  return value;
+}
+
 export function Viewer({ url, className = "" }: { url: string; className?: string }) {
+  const stage = useThemeVar("--panel", "#1a1d24");
+  const gridCell = useThemeVar("--line", "#2c313c");
+  const gridSection = useThemeVar("--dim", "#3a4150");
   const [shading, setShading] = useState<Shading>("render");
   const [clips, setClips] = useState<string[]>([]);
   const [clip, setClip] = useState<string | null>(null);
@@ -223,7 +250,7 @@ export function Viewer({ url, className = "" }: { url: string; className?: strin
         dpr={[1, 2]}
         className="!absolute inset-0"
       >
-        <color attach="background" args={["#1a1d24"]} />
+        <color attach="background" args={[stage]} />
         <ambientLight intensity={0.4} />
         <directionalLight position={[4, 6, 5]} intensity={2} />
         <directionalLight position={[-5, 2, -4]} intensity={0.9} color="#a8c4ff" />
@@ -239,8 +266,8 @@ export function Viewer({ url, className = "" }: { url: string; className?: strin
             position={[0, -radius * 1.02, 0]}
             cellSize={radius / 2}
             sectionSize={radius * 2}
-            cellColor="#2c313c"
-            sectionColor="#3a4150"
+            cellColor={gridCell}
+            sectionColor={gridSection}
             fadeDistance={radius * 14}
             fadeStrength={1.5}
             infiniteGrid
@@ -263,7 +290,7 @@ export function Viewer({ url, className = "" }: { url: string; className?: strin
               onClick={() => setShading(s.value)}
               aria-pressed={shading === s.value}
               className={`label rounded px-2 py-1.5 text-[10px] transition-colors ${
-                shading === s.value ? "bg-sel text-void" : "text-dim hover:bg-panel hover:text-ink"
+                shading === s.value ? "bg-sel text-on-sel" : "text-dim hover:bg-panel hover:text-ink"
               }`}
             >
               {s.label}
@@ -290,7 +317,7 @@ export function Viewer({ url, className = "" }: { url: string; className?: strin
                 onClick={() => setClip(clip === c ? null : c)}
                 aria-pressed={clip === c}
                 className={`num max-w-[190px] truncate rounded px-2 py-1 text-[11px] transition-colors ${
-                  clip === c ? "bg-sel text-void" : "text-dim hover:bg-panel hover:text-ink"
+                  clip === c ? "bg-sel text-on-sel" : "text-dim hover:bg-panel hover:text-ink"
                 }`}
               >
                 {c}

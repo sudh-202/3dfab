@@ -54,12 +54,11 @@ export interface Model {
   format: string;
   collection: string;
   group: string;
-  sourcePath: string;
-  relPath: string;
   bytes: number;
   modified: string;
   created: string;
-  duplicates: string[];
+  /** Byte-identical copies that were collapsed into this record. */
+  duplicateCount: number;
   triangles: number | null;
   vertices: number | null;
   weight: Weight;
@@ -72,7 +71,6 @@ export interface Model {
 
 export interface Library {
   generatedAt: string;
-  host: string;
   totals: {
     models: number;
     bytes: number;
@@ -96,13 +94,27 @@ export function getModel(id: string) {
   return models.find((m) => m.id === id);
 }
 
-/** Models sharing a group + collection, minus the one being viewed. */
+/**
+ * Same asset exported more than once — a source mesh and its game-ready
+ * decimation, say. They share a name, differ in geometry, and belong on one
+ * card with a picker rather than on two near-identical cards.
+ */
+export const variantKey = (m: Model) => m.name.trim().toLowerCase();
+
+export function variantsOf(model: Model) {
+  const key = variantKey(model);
+  return models.filter((m) => m.id !== model.id && variantKey(m) === key);
+}
+
+/** Models sharing a group + collection, minus the one being viewed and its variants. */
 export function relatedModels(model: Model, limit = 8) {
-  const sameGroup = models.filter(
-    (m) => m.id !== model.id && m.collection === model.collection && m.group === model.group
+  const key = variantKey(model);
+  const others = models.filter((m) => m.id !== model.id && variantKey(m) !== key);
+  const sameGroup = others.filter(
+    (m) => m.collection === model.collection && m.group === model.group
   );
-  const sameCollection = models.filter(
-    (m) => m.id !== model.id && m.collection === model.collection && m.group !== model.group
+  const sameCollection = others.filter(
+    (m) => m.collection === model.collection && m.group !== model.group
   );
   return [...sameGroup, ...sameCollection].slice(0, limit);
 }

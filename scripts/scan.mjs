@@ -84,6 +84,8 @@ function main() {
   if (COPY) fs.mkdirSync(OUT_MODELS, { recursive: true });
 
   const seen = new Map();
+  // Source paths stay in memory for copying and never reach the index.
+  const sourceOf = new Map();
   const records = [];
   const missingRoots = [];
 
@@ -105,7 +107,7 @@ function main() {
       }
       const fp = fingerprint(file, stat.size);
       if (seen.has(fp)) {
-        seen.get(fp).duplicates.push(file);
+        seen.get(fp).duplicateCount++;
         continue;
       }
 
@@ -125,12 +127,10 @@ function main() {
         format,
         collection: root.label,
         group: groupOf(rel),
-        sourcePath: file,
-        relPath: rel,
         bytes: stat.size,
         modified: stat.mtime.toISOString(),
         created: stat.birthtime.toISOString(),
-        duplicates: [],
+        duplicateCount: 0,
         triangles: detail.triangles ?? null,
         vertices: detail.vertices ?? null,
         weight: weightClass(detail.triangles),
@@ -141,6 +141,7 @@ function main() {
         previewUrl: null,
       };
       seen.set(fp, record);
+      sourceOf.set(fp, file);
       records.push(record);
     }
   }
@@ -159,7 +160,7 @@ function main() {
       const dest = path.join(OUT_MODELS, `${r.id}.${r.format}`);
       try {
         if (!fs.existsSync(dest) || fs.statSync(dest).size !== r.bytes) {
-          fs.copyFileSync(r.sourcePath, dest);
+          fs.copyFileSync(sourceOf.get(r.id), dest);
         }
         r.previewUrl = `/models/${r.id}.${r.format}`;
         copiedBytes += r.bytes;
@@ -188,14 +189,13 @@ function main() {
 
   const index = {
     generatedAt: new Date().toISOString(),
-    host: process.env.USER ?? "local",
     totals: {
       models: records.length,
       bytes: records.reduce((s, r) => s + r.bytes, 0),
       triangles: records.reduce((s, r) => s + (r.triangles ?? 0), 0),
       vertices: records.reduce((s, r) => s + (r.vertices ?? 0), 0),
       animated: records.filter((r) => r.animationCount !== 0).length,
-      duplicates: records.reduce((s, r) => s + r.duplicates.length, 0),
+      duplicates: records.reduce((s, r) => s + r.duplicateCount, 0),
       previewable: copied,
       previewBytes: copiedBytes,
     },

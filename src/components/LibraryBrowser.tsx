@@ -1,10 +1,12 @@
 "use client";
 
-import { useDeferredValue, useMemo, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import { ModelCard } from "./ModelCard";
+import { VariantCard } from "./VariantCard";
 import { WeightDot } from "./BudgetMeter";
 import { bytes, count } from "@/lib/format";
 import {
+  variantKey,
   WEIGHT_LABEL,
   WEIGHT_ORDER,
   WEIGHT_RANGE,
@@ -16,8 +18,8 @@ type Sort = "name" | "tris-desc" | "tris-asc" | "size-desc" | "recent";
 
 const SORTS: { value: Sort; label: string }[] = [
   { value: "name", label: "Name" },
-  { value: "tris-desc", label: "Heaviest" },
-  { value: "tris-asc", label: "Lightest" },
+  { value: "tris-desc", label: "Heaviest first" },
+  { value: "tris-asc", label: "Lightest first" },
   { value: "size-desc", label: "Largest file" },
   { value: "recent", label: "Recently changed" },
 ];
@@ -25,50 +27,119 @@ const SORTS: { value: Sort; label: string }[] = [
 const FLAGS = [
   { key: "animated", label: "Animated" },
   { key: "viewable", label: "Viewable in browser" },
-  { key: "duplicated", label: "Has duplicates" },
 ] as const;
-
 type FlagKey = (typeof FLAGS)[number]["key"];
 
-/** One row in a facet list: a count you can act on, not just a filter. */
-function Facet({
+type Option = { value: string; label: string; n: number; note?: string; swatch?: React.ReactNode };
+
+/** Dropdown facet, Sketchfab-style: one button per dimension, checkboxes inside. */
+function FilterMenu({
   label,
-  n,
-  active,
-  onClick,
-  swatch,
-  note,
+  options,
+  selected,
+  onToggle,
 }: {
   label: string;
-  n: number;
-  active: boolean;
-  onClick: () => void;
-  swatch?: React.ReactNode;
-  note?: string;
+  options: Option[];
+  selected: string[];
+  onToggle: (v: string) => void;
 }) {
+  const [open, setOpen] = useState(false);
+  const root = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e: MouseEvent) => {
+      if (!root.current?.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
+  const active = selected.length > 0;
+
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-pressed={active}
-      className={`flex w-full items-center gap-2 rounded px-2 py-1.5 text-left text-[12.5px] transition-colors ${
-        active ? "bg-sel-soft text-sel" : "text-dim hover:bg-panel hover:text-ink"
-      }`}
-    >
-      {swatch}
-      <span className="min-w-0 flex-1 truncate">{label}</span>
-      {note && <span className="num text-[10px] text-faint">{note}</span>}
-      <span className="num shrink-0 text-[11px] text-faint">{n}</span>
-    </button>
+    <div ref={root} className="relative">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        aria-haspopup="listbox"
+        className={`flex h-10 items-center gap-2 rounded-lg border px-3.5 text-[13px] transition-colors ${
+          active
+            ? "border-sel/60 bg-sel-soft text-sel"
+            : "border-line-soft bg-panel text-dim hover:border-line hover:text-ink"
+        }`}
+      >
+        {label}
+        {active && <span className="num text-[11px]">{selected.length}</span>}
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5" className={`transition-transform ${open ? "rotate-180" : ""}`} aria-hidden>
+          <path d="m2 3.5 3 3 3-3" />
+        </svg>
+      </button>
+
+      {open && (
+        <ul
+          role="listbox"
+          aria-multiselectable
+          className="absolute left-0 top-[calc(100%+6px)] z-50 max-h-[60vh] min-w-[240px] overflow-y-auto rounded-xl border border-line bg-panel p-1.5 shadow-2xl"
+        >
+          {options.map((o) => {
+            const on = selected.includes(o.value);
+            return (
+              <li key={o.value}>
+                <button
+                  type="button"
+                  role="option"
+                  aria-selected={on}
+                  onClick={() => onToggle(o.value)}
+                  className={`flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left text-[13px] transition-colors ${
+                    on ? "bg-sel-soft text-sel" : "text-dim hover:bg-raise hover:text-ink"
+                  }`}
+                >
+                  <span
+                    className={`grid size-4 shrink-0 place-items-center rounded border ${
+                      on ? "border-sel bg-sel text-on-sel" : "border-line"
+                    }`}
+                    aria-hidden
+                  >
+                    {on && (
+                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="m2 5 2.2 2.2L8 3" />
+                      </svg>
+                    )}
+                  </span>
+                  {o.swatch}
+                  <span className="min-w-0 flex-1 truncate">{o.label}</span>
+                  {o.note && <span className="num text-[10.5px] text-faint">{o.note}</span>}
+                  <span className="num shrink-0 text-[11px] text-faint">{o.n}</span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
   );
 }
 
-function Group({ title, children }: { title: string; children: React.ReactNode }) {
+function Chip({ children, onRemove }: { children: React.ReactNode; onRemove: () => void }) {
   return (
-    <section className="border-t border-line-soft py-4 first:border-t-0 first:pt-0">
-      <h2 className="label mb-2 px-2">{title}</h2>
-      <div className="space-y-px">{children}</div>
-    </section>
+    <button
+      type="button"
+      onClick={onRemove}
+      className="flex items-center gap-1.5 rounded-full border border-line-soft bg-panel px-3 py-1 text-[12px] text-dim transition-colors hover:border-line hover:text-ink"
+    >
+      {children}
+      <span aria-hidden className="text-faint">
+        ×
+      </span>
+    </button>
   );
 }
 
@@ -80,15 +151,15 @@ export function LibraryBrowser({ models }: { models: Model[] }) {
   const [weights, setWeights] = useState<Weight[]>([]);
   const [flags, setFlags] = useState<FlagKey[]>([]);
   const [sort, setSort] = useState<Sort>("name");
-  const [railOpen, setRailOpen] = useState(false);
 
   const deferredQuery = useDeferredValue(query);
 
-  const toggle = <T,>(list: T[], set: (v: T[]) => void, value: T) =>
-    set(list.includes(value) ? list.filter((v) => v !== value) : [...list, value]);
+  const toggle = <T extends string>(list: T[], set: (v: T[]) => void) => (value: string) => {
+    const v = value as T;
+    set(list.includes(v) ? list.filter((x) => x !== v) : [...list, v]);
+  };
 
-  const activeCount =
-    collections.length + groups.length + formats.length + weights.length + flags.length;
+  const activeCount = collections.length + groups.length + formats.length + weights.length + flags.length;
 
   const reset = () => {
     setCollections([]);
@@ -100,16 +171,10 @@ export function LibraryBrowser({ models }: { models: Model[] }) {
   };
 
   const matchesFlag = (m: Model, f: FlagKey) =>
-    f === "animated"
-      ? m.animationCount !== 0
-      : f === "viewable"
-        ? Boolean(m.previewUrl)
-        : m.duplicates.length > 0;
+    f === "animated" ? m.animationCount !== 0 : Boolean(m.previewUrl);
 
   const filtered = useMemo(() => {
-    const q = deferredQuery.trim().toLowerCase();
-    const terms = q ? q.split(/\s+/) : [];
-
+    const terms = deferredQuery.trim().toLowerCase().split(/\s+/).filter(Boolean);
     const result = models.filter((m) => {
       if (collections.length && !collections.includes(m.collection)) return false;
       if (groups.length && !groups.includes(m.group)) return false;
@@ -117,11 +182,9 @@ export function LibraryBrowser({ models }: { models: Model[] }) {
       if (weights.length && !weights.includes(m.weight)) return false;
       if (flags.length && !flags.every((f) => matchesFlag(m, f))) return false;
       if (!terms.length) return true;
-
-      const haystack = `${m.name} ${m.fileName} ${m.group} ${m.collection} ${m.relPath}`.toLowerCase();
-      return terms.every((t) => haystack.includes(t));
+      const hay = `${m.name} ${m.fileName} ${m.group} ${m.collection}`.toLowerCase();
+      return terms.every((t) => hay.includes(t));
     });
-
     const by: Record<Sort, (a: Model, b: Model) => number> = {
       name: (a, b) => a.name.localeCompare(b.name),
       "tris-desc": (a, b) => (b.triangles ?? -1) - (a.triangles ?? -1),
@@ -132,205 +195,142 @@ export function LibraryBrowser({ models }: { models: Model[] }) {
     return result.sort(by[sort]);
   }, [models, deferredQuery, collections, groups, formats, weights, flags, sort]);
 
-  /* Facet counts reflect everything except the facet's own dimension, so a
-     count never reads zero for an option that would actually return results. */
-  const tally = <K extends string>(key: (m: Model) => K, ignore: unknown[]) => {
+  /* Same-named exports collapse into one card, in the order the sort placed them. */
+  const cards = useMemo(() => {
+    const seen = new Map<string, Model[]>();
+    for (const m of filtered) {
+      const k = variantKey(m);
+      if (!seen.has(k)) seen.set(k, []);
+      seen.get(k)!.push(m);
+    }
+    return [...seen.values()];
+  }, [filtered]);
+
+  /* Facet counts ignore their own dimension so an option never reads zero
+     when picking it would actually return results. */
+  const tally = <K extends string>(key: (m: Model) => K, ignore: unknown) => {
     const map = new Map<K, number>();
     const q = deferredQuery.trim().toLowerCase();
     for (const m of models) {
       if (ignore !== collections && collections.length && !collections.includes(m.collection)) continue;
       if (ignore !== groups && groups.length && !groups.includes(m.group)) continue;
       if (ignore !== formats && formats.length && !formats.includes(m.format)) continue;
-      if (ignore !== weights && weights.length && !weights.includes(m.weight as Weight)) continue;
+      if (ignore !== weights && weights.length && !weights.includes(m.weight)) continue;
       if (ignore !== flags && flags.length && !flags.every((f) => matchesFlag(m, f))) continue;
-      if (q && !`${m.name} ${m.fileName} ${m.group} ${m.relPath}`.toLowerCase().includes(q)) continue;
+      if (q && !`${m.name} ${m.fileName} ${m.group}`.toLowerCase().includes(q)) continue;
       const k = key(m);
       map.set(k, (map.get(k) ?? 0) + 1);
     }
     return map;
   };
 
-  const collectionCounts = tally((m) => m.collection, collections);
-  const groupCounts = tally((m) => m.group, groups);
-  const formatCounts = tally((m) => m.format, formats);
+  const desc = (map: Map<string, number>): Option[] =>
+    [...map.entries()].sort((a, b) => b[1] - a[1]).map(([value, n]) => ({ value, label: value, n }));
+
+  const collectionOpts = desc(tally((m) => m.collection, collections));
+  const groupOpts = desc(tally((m) => m.group, groups));
+  const formatOpts = desc(tally((m) => m.format, formats)).map((o) => ({ ...o, label: `.${o.value}` }));
   const weightCounts = tally((m) => m.weight, weights);
-  const flagCounts = new Map(
-    FLAGS.map((f) => [f.key, models.filter((m) => matchesFlag(m, f.key)).length] as const)
-  );
+  const weightOpts: Option[] = WEIGHT_ORDER.filter((w) => weightCounts.get(w)).map((w) => ({
+    value: w,
+    label: WEIGHT_LABEL[w],
+    note: WEIGHT_RANGE[w],
+    n: weightCounts.get(w) ?? 0,
+    swatch: <WeightDot weight={w} />,
+  }));
+  const flagCounts = tally((m) => FLAGS.filter((f) => matchesFlag(m, f.key)).map((f) => f.key).join("|") as string, flags);
+  const flagOpts: Option[] = FLAGS.map((f) => ({
+    value: f.key,
+    label: f.label,
+    n: [...flagCounts.entries()].filter(([k]) => k.split("|").includes(f.key)).reduce((s, [, n]) => s + n, 0),
+  }));
 
   const shownBytes = filtered.reduce((s, m) => s + m.bytes, 0);
   const shownTris = filtered.reduce((s, m) => s + (m.triangles ?? 0), 0);
 
-  const sortedGroups = [...groupCounts.entries()].sort((a, b) => b[1] - a[1]);
-
   return (
-    <div className="mx-auto flex max-w-[1600px] gap-0 px-4 sm:px-6">
-      {/* Filter rail — an outliner, not a sidebar of chips. */}
-      <aside
-        className={`${
-          railOpen ? "block" : "hidden"
-        } shrink-0 border-r border-line-soft pr-5 lg:block lg:w-[212px]`}
-      >
-        <div className="sticky top-14 max-h-[calc(100dvh-3.5rem)] overflow-y-auto py-5">
-          <Group title="Project">
-            {[...collectionCounts.entries()]
-              .sort((a, b) => b[1] - a[1])
-              .map(([name, n]) => (
-                <Facet
-                  key={name}
-                  label={name}
-                  n={n}
-                  active={collections.includes(name)}
-                  onClick={() => toggle(collections, setCollections, name)}
-                />
-              ))}
-          </Group>
-
-          <Group title="Triangle budget">
-            {WEIGHT_ORDER.filter((w) => weightCounts.get(w)).map((w) => (
-              <Facet
-                key={w}
-                label={WEIGHT_LABEL[w]}
-                note={WEIGHT_RANGE[w]}
-                n={weightCounts.get(w) ?? 0}
-                active={weights.includes(w)}
-                onClick={() => toggle(weights, setWeights, w)}
-                swatch={<WeightDot weight={w} />}
-              />
-            ))}
-          </Group>
-
-          <Group title="Format">
-            {[...formatCounts.entries()]
-              .sort((a, b) => b[1] - a[1])
-              .map(([f, n]) => (
-                <Facet
-                  key={f}
-                  label={`.${f}`}
-                  n={n}
-                  active={formats.includes(f)}
-                  onClick={() => toggle(formats, setFormats, f)}
-                />
-              ))}
-          </Group>
-
-          <Group title="Contains">
-            {FLAGS.map((f) => (
-              <Facet
-                key={f.key}
-                label={f.label}
-                n={flagCounts.get(f.key) ?? 0}
-                active={flags.includes(f.key)}
-                onClick={() => toggle(flags, setFlags, f.key)}
-              />
-            ))}
-          </Group>
-
-          <Group title="Folder">
-            {sortedGroups.map(([g, n]) => (
-              <Facet
-                key={g}
-                label={g}
-                n={n}
-                active={groups.includes(g)}
-                onClick={() => toggle(groups, setGroups, g)}
-              />
-            ))}
-          </Group>
-        </div>
-      </aside>
-
-      <div className="min-w-0 flex-1 lg:pl-6">
-        {/* Command bar */}
-        <div className="sticky top-14 z-40 -mx-4 border-b border-line-soft bg-void/85 px-4 py-3 backdrop-blur-md sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
-          <div className="flex flex-wrap items-center gap-2">
-            <button
-              type="button"
-              onClick={() => setRailOpen((v) => !v)}
-              className="label rounded border border-line-soft px-2.5 py-2 text-dim hover:text-ink lg:hidden"
-              aria-expanded={railOpen}
-            >
-              Filters{activeCount > 0 && ` (${activeCount})`}
-            </button>
-
-            <div className="relative min-w-[180px] flex-1">
-              <svg
-                className="pointer-events-none absolute left-2.5 top-1/2 size-3.5 -translate-y-1/2 text-faint"
-                viewBox="0 0 16 16"
-                fill="none"
-                aria-hidden
-              >
-                <circle cx="7" cy="7" r="4.5" stroke="currentColor" strokeWidth="1.4" />
-                <path d="m10.5 10.5 3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
-              </svg>
-              <input
-                type="search"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search name, file or folder"
-                aria-label="Search models"
-                className="w-full rounded border border-line-soft bg-panel py-2 pl-8 pr-3 text-[13px] text-ink placeholder:text-faint focus:border-sel focus:outline-none"
-              />
-            </div>
-
-            <label className="flex items-center gap-2">
-              <span className="label hidden sm:inline">Sort</span>
-              <select
-                value={sort}
-                onChange={(e) => setSort(e.target.value as Sort)}
-                aria-label="Sort models"
-                className="num rounded border border-line-soft bg-panel px-2 py-2 text-[12px] text-dim focus:border-sel focus:outline-none"
-              >
-                {SORTS.map((s) => (
-                  <option key={s.value} value={s.value}>
-                    {s.label}
-                  </option>
-                ))}
-              </select>
-            </label>
-
-            {activeCount + (query ? 1 : 0) > 0 && (
-              <button
-                type="button"
-                onClick={reset}
-                className="label rounded px-2 py-2 text-sel hover:bg-sel-soft"
-              >
-                Reset
-              </button>
-            )}
+    <section className="mx-auto max-w-[1440px] px-5 sm:px-8">
+      {/* Filter bar */}
+      <div className="sticky top-16 z-40 -mx-5 border-b border-line-soft bg-void/85 px-5 py-4 backdrop-blur-md sm:-mx-8 sm:px-8">
+        <div className="flex flex-wrap items-center gap-2.5">
+          <div className="relative min-w-[220px] flex-1 sm:max-w-md">
+            <svg className="pointer-events-none absolute left-3.5 top-1/2 size-4 -translate-y-1/2 text-faint" viewBox="0 0 16 16" fill="none" aria-hidden>
+              <circle cx="7" cy="7" r="4.5" stroke="currentColor" strokeWidth="1.4" />
+              <path d="m10.5 10.5 3 3" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+            </svg>
+            <input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search models"
+              aria-label="Search models"
+              className="h-10 w-full rounded-lg border border-line-soft bg-panel pl-10 pr-3 text-[13.5px] text-ink placeholder:text-faint focus:border-sel focus:outline-none"
+            />
           </div>
 
-          <p className="num mt-2 text-[11px] text-faint">
-            {filtered.length === models.length
-              ? `All ${models.length} models`
-              : `${filtered.length} of ${models.length} models`}
+          <FilterMenu label="Project" options={collectionOpts} selected={collections} onToggle={toggle(collections, setCollections)} />
+          <FilterMenu label="Triangle budget" options={weightOpts} selected={weights} onToggle={toggle(weights, setWeights)} />
+          <FilterMenu label="Format" options={formatOpts} selected={formats} onToggle={toggle(formats, setFormats)} />
+          <FilterMenu label="Folder" options={groupOpts} selected={groups} onToggle={toggle(groups, setGroups)} />
+          <FilterMenu label="Contains" options={flagOpts} selected={flags} onToggle={toggle(flags, setFlags)} />
+
+          <label className="ml-auto flex h-10 items-center gap-2 rounded-lg border border-line-soft bg-panel px-3.5 text-[13px] text-dim">
+            <span className="label text-[10px]">Sort</span>
+            <select
+              value={sort}
+              onChange={(e) => setSort(e.target.value as Sort)}
+              aria-label="Sort models"
+              className="bg-transparent text-[13px] text-ink focus:outline-none"
+            >
+              {SORTS.map((s) => (
+                <option key={s.value} value={s.value}>
+                  {s.label}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+
+        <div className="mt-3 flex flex-wrap items-center gap-2">
+          <p className="num mr-1 text-[12px] text-faint">
+            {filtered.length === models.length ? `${models.length} models` : `${filtered.length} of ${models.length}`}
             {" · "}
-            {count(shownTris)} tris {" · "} {bytes(shownBytes)}
+            {count(shownTris)} tris · {bytes(shownBytes)}
           </p>
-        </div>
-
-        {filtered.length === 0 ? (
-          <div className="flex flex-col items-center gap-3 py-28 text-center">
-            <p className="display text-lg text-dim">Nothing matches those filters</p>
-            <p className="max-w-sm text-[13px] text-faint">
-              Widen the triangle budget or clear the search to see the rest of the library.
-            </p>
-            <button
-              type="button"
-              onClick={reset}
-              className="label mt-1 rounded border border-line px-3 py-2 text-sel hover:bg-sel-soft"
-            >
-              Clear filters
+          {collections.map((c) => <Chip key={c} onRemove={() => toggle(collections, setCollections)(c)}>{c}</Chip>)}
+          {weights.map((w) => <Chip key={w} onRemove={() => toggle(weights, setWeights)(w)}>{WEIGHT_LABEL[w]}</Chip>)}
+          {formats.map((f) => <Chip key={f} onRemove={() => toggle(formats, setFormats)(f)}>.{f}</Chip>)}
+          {groups.map((g) => <Chip key={g} onRemove={() => toggle(groups, setGroups)(g)}>{g}</Chip>)}
+          {flags.map((f) => <Chip key={f} onRemove={() => toggle(flags, setFlags)(f)}>{FLAGS.find((x) => x.key === f)?.label}</Chip>)}
+          {activeCount + (query ? 1 : 0) > 0 && (
+            <button type="button" onClick={reset} className="label rounded-md px-2 py-1 text-sel hover:bg-sel-soft">
+              Reset
             </button>
-          </div>
-        ) : (
-          <div className="grid grid-cols-2 gap-3 py-5 sm:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
-            {filtered.map((m) => (
-              <ModelCard key={m.id} model={m} />
-            ))}
-          </div>
-        )}
+          )}
+        </div>
       </div>
-    </div>
+
+      {cards.length === 0 ? (
+        <div className="flex flex-col items-center gap-3 py-32 text-center">
+          <p className="display text-xl text-dim">Nothing matches those filters</p>
+          <p className="max-w-sm text-[14px] text-faint">
+            Widen the triangle budget or clear the search to see the rest of the library.
+          </p>
+          <button type="button" onClick={reset} className="label mt-2 rounded-lg border border-line px-4 py-2.5 text-sel hover:bg-sel-soft">
+            Clear filters
+          </button>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 gap-5 py-8 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+          {cards.map((group) =>
+            group.length > 1 ? (
+              <VariantCard key={group[0].id} variants={group} />
+            ) : (
+              <ModelCard key={group[0].id} model={group[0]} />
+            )
+          )}
+        </div>
+      )}
+    </section>
   );
 }

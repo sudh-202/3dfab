@@ -1,33 +1,97 @@
-@import "tailwindcss";
+/*
+  Tailwind's automatic source detection would otherwise read public/models
+  (220 MB of GLB binaries) looking for class names — that is what ran the
+  Vercel build container out of memory. Scan src/ only.
+*/
+@import "tailwindcss" source("../");
 
 /*
   Palette is lifted from a DCC viewport rather than a marketplace: a cool slate
-  ground, and Blender's active-object orange as the one interactive accent.
-  The X/Y/Z triad is reserved for bounding-box dimensions, where it means
-  something, and is never used decoratively.
+  ground with Blender's active-object orange as the one interactive accent. The
+  X/Y/Z triad is reserved for bounding-box dimensions and never used
+  decoratively. Both themes define every token; nothing lives in one only.
 */
-@theme {
-  --color-void: #14161c;
-  --color-panel: #1a1d24;
-  --color-raise: #21252e;
-  --color-line: #2c313c;
-  --color-line-soft: #232730;
+:root {
+  --void: #14161c;
+  --panel: #1a1d24;
+  --raise: #21252e;
+  --line: #2c313c;
+  --line-soft: #232730;
 
-  --color-ink: #e6e9f0;
-  --color-dim: #99a1b3;
-  --color-faint: #6b7385;
+  --ink: #e6e9f0;
+  --dim: #99a1b3;
+  --faint: #6b7385;
 
-  --color-sel: #f5a623;
-  --color-sel-soft: #f5a6231a;
+  --sel: #f5a623;
+  --sel-soft: rgb(245 166 35 / 0.12);
+  --on-sel: #14161c;
 
-  --color-axis-x: #e0555a;
-  --color-axis-y: #7cbf62;
-  --color-axis-z: #5384e8;
+  --axis-x: #e0555a;
+  --axis-y: #7cbf62;
+  --axis-z: #5384e8;
 
-  --color-w-light: #7cbf62;
-  --color-w-medium: #e5c558;
-  --color-w-heavy: #e8913f;
-  --color-w-extreme: #e0555a;
+  --w-light: #7cbf62;
+  --w-medium: #e5c558;
+  --w-heavy: #e8913f;
+  --w-extreme: #e0555a;
+
+  --scrim: rgb(20 22 28 / 0.72);
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --void: #f5f6f9;
+  --panel: #ffffff;
+  --raise: #eef0f4;
+  --line: #d6dae3;
+  --line-soft: #e5e8ee;
+
+  --ink: #171a21;
+  --dim: #5b6372;
+  --faint: #8b93a4;
+
+  --sel: #d9860f;
+  --sel-soft: rgb(217 134 15 / 0.12);
+  --on-sel: #ffffff;
+
+  --axis-x: #cf3f45;
+  --axis-y: #4f9a3a;
+  --axis-z: #3466d1;
+
+  --w-light: #4f9a3a;
+  --w-medium: #c2a02a;
+  --w-heavy: #d5771e;
+  --w-extreme: #cf3f45;
+
+  --scrim: rgb(23 26 33 / 0.5);
+  color-scheme: light;
+}
+
+@theme inline {
+  --color-void: var(--void);
+  --color-panel: var(--panel);
+  --color-raise: var(--raise);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+
+  --color-ink: var(--ink);
+  --color-dim: var(--dim);
+  --color-faint: var(--faint);
+
+  --color-sel: var(--sel);
+  --color-sel-soft: var(--sel-soft);
+  --color-on-sel: var(--on-sel);
+
+  --color-axis-x: var(--axis-x);
+  --color-axis-y: var(--axis-y);
+  --color-axis-z: var(--axis-z);
+
+  --color-w-light: var(--w-light);
+  --color-w-medium: var(--w-medium);
+  --color-w-heavy: var(--w-heavy);
+  --color-w-extreme: var(--w-extreme);
+
+  --color-scrim: var(--scrim);
 
   --font-display: var(--font-archivo), system-ui, sans-serif;
   --font-sans: var(--font-inter-tight), system-ui, sans-serif;
@@ -36,17 +100,16 @@
 
 @layer base {
   * {
-    border-color: var(--color-line-soft);
+    border-color: var(--line-soft);
   }
 
   html {
-    color-scheme: dark;
-    scrollbar-color: var(--color-line) transparent;
+    scrollbar-color: var(--line) transparent;
   }
 
   body {
-    background: var(--color-void);
-    color: var(--color-ink);
+    background: var(--void);
+    color: var(--ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     font-feature-settings: "cv05" 1;
@@ -60,7 +123,7 @@
     text-transform: uppercase;
     letter-spacing: 0.14em;
     font-size: 0.6875rem;
-    color: var(--color-faint);
+    color: var(--faint);
   }
 
   .display {
@@ -78,14 +141,19 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-sel);
+    outline: 2px solid var(--sel);
     outline-offset: 2px;
     border-radius: 2px;
   }
 
   ::selection {
-    background: var(--color-sel);
-    color: #14161c;
+    background: var(--sel);
+    color: var(--on-sel);
+  }
+
+  dialog::backdrop {
+    background: var(--scrim);
+    backdrop-filter: blur(4px);
   }
 }
 
@@ -93,14 +161,10 @@
   /* Faint viewport grid, only ever behind the hero. */
   .grid-floor {
     background-image:
-      linear-gradient(to right, var(--color-line-soft) 1px, transparent 1px),
-      linear-gradient(to bottom, var(--color-line-soft) 1px, transparent 1px);
-    background-size: 56px 56px;
-    mask-image: radial-gradient(ellipse 100% 70% at 50% 0%, #000 20%, transparent 78%);
-  }
-
-  .hairline {
-    box-shadow: inset 0 0 0 1px var(--color-line-soft);
+      linear-gradient(to right, var(--line-soft) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--line-soft) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, #000 10%, transparent 75%);
   }
 }
 
