@@ -46,6 +46,16 @@ Triangle counts walk the node graph, so an instanced mesh is counted every
 time it is drawn. Compressed `.blend` files (zstd/gzip) are reported but not
 parsed.
 
+## Demo video
+
+```bash
+npm run build && npx next start -p 3100 &
+node scripts/record-demo.mjs <outDir>
+```
+
+Records a scripted walkthrough with Playwright against the production build
+and writes `<outDir>/video/raw/*.webm` plus `marks.json` (caption timestamps).
+
 ## Develop
 
 ```bash
