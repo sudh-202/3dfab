@@ -1,26 +1,114 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  Palette is lifted from a DCC viewport rather than a marketplace: a cool slate
+  ground, and Blender's active-object orange as the one interactive accent.
+  The X/Y/Z triad is reserved for bounding-box dimensions, where it means
+  something, and is never used decoratively.
+*/
+@theme {
+  --color-void: #14161c;
+  --color-panel: #1a1d24;
+  --color-raise: #21252e;
+  --color-line: #2c313c;
+  --color-line-soft: #232730;
+
+  --color-ink: #e6e9f0;
+  --color-dim: #99a1b3;
+  --color-faint: #6b7385;
+
+  --color-sel: #f5a623;
+  --color-sel-soft: #f5a6231a;
+
+  --color-axis-x: #e0555a;
+  --color-axis-y: #7cbf62;
+  --color-axis-z: #5384e8;
+
+  --color-w-light: #7cbf62;
+  --color-w-medium: #e5c558;
+  --color-w-heavy: #e8913f;
+  --color-w-extreme: #e0555a;
+
+  --font-display: var(--font-archivo), system-ui, sans-serif;
+  --font-sans: var(--font-inter-tight), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  * {
+    border-color: var(--color-line-soft);
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  html {
+    color-scheme: dark;
+    scrollbar-color: var(--color-line) transparent;
+  }
+
+  body {
+    background: var(--color-void);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "cv05" 1;
+  }
+
+  /* Equipment labelling: expanded, uppercase, wide-tracked, used sparingly. */
+  .label {
+    font-family: var(--font-display);
+    font-variation-settings: "wdth" 112;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.6875rem;
+    color: var(--color-faint);
+  }
+
+  .display {
+    font-family: var(--font-display);
+    font-variation-settings: "wdth" 118;
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    line-height: 0.98;
+  }
+
+  .num {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum" 1, "zero" 1;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-sel);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--color-sel);
+    color: #14161c;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  /* Faint viewport grid, only ever behind the hero. */
+  .grid-floor {
+    background-image:
+      linear-gradient(to right, var(--color-line-soft) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-line-soft) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 100% 70% at 50% 0%, #000 20%, transparent 78%);
+  }
+
+  .hairline {
+    box-shadow: inset 0 0 0 1px var(--color-line-soft);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }

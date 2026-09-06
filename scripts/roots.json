@@ -1,0 +1,11 @@
+{
+  "roots": [
+    { "label": "Sudhverse",       "path": "/Users/sudhanshu/Developer/ownProjects/sudhverse" },
+    { "label": "Cinema Survival", "path": "/Volumes/External Storage/Developer/own-projects/Cinema Survival" },
+    { "label": "Dev Portfolio",   "path": "/Users/sudhanshu/Developer/ownProjects/devporfolio" },
+    { "label": "InspectMyPC",     "path": "/Volumes/External Storage/Developer/own-projects/inspectmypc" },
+    { "label": "Blender Projects","path": "/Volumes/External Storage/Developer/BlenderProjects" }
+  ],
+  "ignore": ["node_modules", ".git", "/dist/", ".next", ".open-next", ".wrangler", "/build/"],
+  "bundle": { "maxFileBytes": 11534336, "maxTotalBytes": 210763776 }
+}

@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 3DFAB
 
-## Getting Started
+A ledger of every 3D model on this machine — Sketchfab-style browsing, but for
+your own disk. Triangle counts, bounding boxes, materials, rigs and animation
+clips are read out of the files themselves, then served as a static site with a
+live WebGL viewer.
 
-First, run the development server:
+**Stack:** Next.js 16 · React Three Fiber · Tailwind v4 · Playwright (thumbnails)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## How it works
+
+```
+scripts/roots.json     which folders to walk
+scripts/scan.mjs       index every .glb/.gltf/.fbx/.blend → data/models.json
+                       copy previewable GLBs → public/models/
+scripts/thumbs.mjs     render shaded + wireframe thumbnails → public/thumbs/
+src/                   the site, built from data/models.json at build time
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Nothing runs at request time. The deployed site is a snapshot of the index;
+the source files themselves stay where they are.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Re-index
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run index          # scan + render new thumbnails
+npm run scan           # index only
+npm run thumbs -- --force   # re-render every thumbnail
+```
 
-## Learn More
+Edit `scripts/roots.json` to add project folders. Files under the bundle cap
+(`bundle.maxFileBytes`, up to `bundle.maxTotalBytes` in total) are copied into
+`public/models/` so the viewer works on a deployment with no access to your disk.
+Larger files stay indexed but show specs without a viewer.
 
-To learn more about Next.js, take a look at the following resources:
+### What gets parsed
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Format   | Read from             | Yields                                                      |
+| -------- | --------------------- | ----------------------------------------------------------- |
+| `.glb`   | glTF JSON chunk       | triangles, vertices, draw calls, bbox, materials, textures, clips, skins/bones, extensions |
+| `.gltf`  | JSON                  | same                                                        |
+| `.fbx`   | binary header + scan  | version, skinned/animated flags, generator                  |
+| `.blend` | block table           | Blender version, object/mesh/material/image/armature counts |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Triangle counts walk the node graph, so an instanced mesh is counted every
+time it is drawn. Compressed `.blend` files (zstd/gzip) are reported but not
+parsed.
 
-## Deploy on Vercel
+## Develop
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm install
+npm run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+
+Static output — any host works. The repo carries the bundled GLBs and
+thumbnails so a fresh clone deploys without re-scanning.
