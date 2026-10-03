@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-03T09:04:41.651Z",
+ "generatedAt": "2026-10-03T09:59:32.250Z",
  "totals": {
   "models": 479,
   "bytes": 897974464,
@@ -115,7 +115,8 @@
     "draco": false
    },
    "previewUrl": "/models/bbbab85192a34670.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "89abfba370c61da2",
@@ -187,7 +188,8 @@
     "draco": false
    },
    "previewUrl": "/models/89abfba370c61da2.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "9c3c2ba318bf4db6",
@@ -343,7 +345,8 @@
     "draco": false
    },
    "previewUrl": "/models/9c3c2ba318bf4db6.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "b853649e92a42058",
@@ -462,7 +465,8 @@
     "draco": false
    },
    "previewUrl": "/models/b853649e92a42058.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "81e4f2e3fe5f919c",
@@ -533,7 +537,8 @@
     "draco": false
    },
    "previewUrl": "/models/81e4f2e3fe5f919c.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "51186aa450df6270",
@@ -604,7 +609,8 @@
     "draco": false
    },
    "previewUrl": "/models/51186aa450df6270.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "fd8b09d4b5ad5da5",
@@ -682,7 +688,8 @@
     "draco": false
    },
    "previewUrl": "/models/fd8b09d4b5ad5da5.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "75ee89ea7d49983c",
@@ -753,7 +760,8 @@
     "draco": false
    },
    "previewUrl": "/models/75ee89ea7d49983c.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "b339dd2ca0cfa719",
@@ -824,7 +832,8 @@
     "draco": false
    },
    "previewUrl": "/models/b339dd2ca0cfa719.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "9baaecdbbfb24fcd",
@@ -895,7 +904,8 @@
     "draco": false
    },
    "previewUrl": "/models/9baaecdbbfb24fcd.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "29e3be3d00c7038c",
@@ -966,7 +976,8 @@
     "draco": false
    },
    "previewUrl": "/models/29e3be3d00c7038c.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "65b304180f3f65a1",
@@ -1037,7 +1048,8 @@
     "draco": false
    },
    "previewUrl": "/models/65b304180f3f65a1.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "77cdbc301417451e",
@@ -1066,7 +1078,8 @@
     "generator": "Blender (stable FBX IO) - 4.4.0 - 5.12.7\u0007"
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "c23d90198fc7e3cb",
@@ -1133,7 +1146,8 @@
     "draco": false
    },
    "previewUrl": "/models/c23d90198fc7e3cb.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "0c16c56f550e550a",
@@ -1200,7 +1214,8 @@
     "draco": false
    },
    "previewUrl": "/models/0c16c56f550e550a.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "cdef6f74900214df",
@@ -1271,7 +1286,8 @@
     "draco": false
    },
    "previewUrl": "/models/cdef6f74900214df.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "f371f24a101b3bad",
@@ -1342,7 +1358,8 @@
     "draco": false
    },
    "previewUrl": "/models/f371f24a101b3bad.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "8febf0b8a62e375a",
@@ -1413,7 +1430,8 @@
     "draco": false
    },
    "previewUrl": "/models/8febf0b8a62e375a.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "0247969fd92fb65c",
@@ -1515,7 +1533,8 @@
     "draco": false
    },
    "previewUrl": "/models/0247969fd92fb65c.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "c236442c4178eca4",
@@ -1658,7 +1677,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/canyon-75-taxi-low-poly-model-9e8f92a215784f3d8aaaaeab1bef54c4",
     "notice": "\"Canyon '75 Taxi - Low poly model\" (https://sketchfab.com/3d-models/canyon-75-taxi-low-poly-model-9e8f92a215784f3d8aaaaeab1bef54c4) by Daniel Zhabotinsky is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: badges, wordmark and cab-company decals removed, number plates blanked, rescaled, LODs and collider added."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "e9a24d65af814553",
@@ -1729,7 +1749,8 @@
     "draco": false
    },
    "previewUrl": "/models/e9a24d65af814553.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "7fc34628e9cb4f2d",
@@ -1800,7 +1821,8 @@
     "draco": false
    },
    "previewUrl": "/models/7fc34628e9cb4f2d.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "32ce285f9a7888a3",
@@ -1867,7 +1889,8 @@
     "draco": false
    },
    "previewUrl": "/models/32ce285f9a7888a3.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "d84b9cab1e96bbcc",
@@ -1938,7 +1961,8 @@
     "draco": false
    },
    "previewUrl": "/models/d84b9cab1e96bbcc.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "a40a956dd36d4897",
@@ -2009,7 +2033,8 @@
     "draco": false
    },
    "previewUrl": "/models/a40a956dd36d4897.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "271da8c7c747cbcb",
@@ -2078,7 +2103,8 @@
     "draco": false
    },
    "previewUrl": "/models/271da8c7c747cbcb.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "a947baaa2d1f9cf3",
@@ -2145,7 +2171,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "7283a8d6da9c99af",
@@ -2212,7 +2239,8 @@
     "draco": false
    },
    "previewUrl": "/models/7283a8d6da9c99af.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "202d64956d324421",
@@ -2286,7 +2314,8 @@
     "draco": false
    },
    "previewUrl": "/models/202d64956d324421.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "20b722953488492a",
@@ -2370,7 +2399,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/f6ee7ec22b5e409db2d99db1a09f9053",
     "notice": "Bench with three seats by OscarLomas3D, CC BY 4.0, optimised for THE VEIL"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "f5590e013be35ae2",
@@ -2454,7 +2484,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/set-of-cardboard-boxes-8986ba512f704ac5b253286a0d1ad8bb",
     "notice": "“Set of Cardboard Boxes” (https://sketchfab.com/3d-models/set-of-cardboard-boxes-8986ba512f704ac5b253286a0d1ad8bb) by NotAnotherApocalypticCo. is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one box extracted."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "92650b0eba70fdce",
@@ -2538,7 +2569,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/set-of-cardboard-boxes-8986ba512f704ac5b253286a0d1ad8bb",
     "notice": "“Set of Cardboard Boxes” (https://sketchfab.com/3d-models/set-of-cardboard-boxes-8986ba512f704ac5b253286a0d1ad8bb) by NotAnotherApocalypticCo. is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one box extracted."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "2a17b6cbb73e74f7",
@@ -2622,7 +2654,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/set-of-cardboard-boxes-8986ba512f704ac5b253286a0d1ad8bb",
     "notice": "“Set of Cardboard Boxes” (https://sketchfab.com/3d-models/set-of-cardboard-boxes-8986ba512f704ac5b253286a0d1ad8bb) by NotAnotherApocalypticCo. is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one box extracted."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "9c730e6532e811d1",
@@ -2712,7 +2745,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/vintage_cabinet_01"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "a1a9b54c017c8d4f",
@@ -2795,7 +2829,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/cardboard_box_01"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "7337a65e7caa4bb3",
@@ -2885,7 +2920,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/security_camera_01"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "29b875ac8806fe11",
@@ -2969,7 +3005,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/2a05034d61dc49bf81b33de44add7aa8",
     "notice": "“Fluorescent Light Fixtures – 4x 4096px2” (https://sketchfab.com/3d-models/2a05034d61dc49bf81b33de44add7aa8) by mark-peters is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one fixture extracted, decimated, LODs, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "23e3e2def5f08be6",
@@ -3052,7 +3089,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/clipboard"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "7086690de03b0824",
@@ -3136,7 +3174,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/e3423f6c753041f0a95da030e674aa28",
     "notice": "“VR ready hospital props” (https://sketchfab.com/3d-models/e3423f6c753041f0a95da030e674aa28) by Grish_Avetisyan is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted from the pack, LODs, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "d8be2bd8addaf8ce",
@@ -3219,7 +3258,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/drawer_cabinet"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "0e3a1556d3853c26",
@@ -3303,7 +3343,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/6885c5f1a68148e1b2b3a4f69b8b3d70",
     "notice": "Quadrocopter 2 by yanix, CC BY 4.0, optimised for THE VEIL"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "5be3a92bb905c114",
@@ -3401,7 +3442,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/6e27dde82d9c4af5b0b3fd03ce01ae58",
     "notice": "“Medical Examination Bed – Game Ready Asset” (https://sketchfab.com/3d-models/6e27dde82d9c4af5b0b3fd03ce01ae58) by INGSOC1984 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: decimated, parts joined and baked to a 1K atlas, LODs."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "590bd95b8dab8e03",
@@ -3484,7 +3526,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/fire_alarm"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "3f7b10b562a75eda",
@@ -3568,7 +3611,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/e3423f6c753041f0a95da030e674aa28",
     "notice": "“VR ready hospital props” (https://sketchfab.com/3d-models/e3423f6c753041f0a95da030e674aa28) by Grish_Avetisyan is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted from the pack, LODs, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "0adda60bd8cd0d9e",
@@ -3652,7 +3696,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/electrical-panel-75367f3627374636ad1d9ad858a66c6b",
     "notice": "“Electrical Panel” (https://sketchfab.com/3d-models/electrical-panel-75367f3627374636ad1d9ad858a66c6b) by Prstk is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: rescaled."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "781f8c1e97bbac51",
@@ -3736,7 +3781,8 @@
     "license": "CC BY 3.0",
     "url": "https://opengameart.org/content/small-hospital-bed",
     "notice": "Small Hospital Bed by TiZeta, modified by qubodup (https://opengameart.org/content/small-hospital-bed), CC BY 3.0 (http://creativecommons.org/licenses/by/3.0/). Modified: rescaled, textures to KTX2."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "5a97682e2fe51bf0",
@@ -3820,7 +3866,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/3facd48dff0945f7b96f95ad31c4beb5",
     "notice": "Doctor's Office - Assets by Evan Petrov, CC BY 4.0, optimised for THE VEIL"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "fd1f181cf05dbd05",
@@ -3925,7 +3972,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/56ffde9920294fb1b8c669d656baa330",
     "notice": "Security Keypad by staceyAEH, CC BY 4.0, optimised for THE VEIL"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "f3e2fc71af5af89d",
@@ -4015,7 +4063,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/classic_laptop"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "a16d6be58aa4eb60",
@@ -4098,7 +4147,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/medical_box"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "0e65d2b5c0bd120e",
@@ -4189,7 +4239,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/3facd48dff0945f7b96f95ad31c4beb5",
     "notice": "Doctor's Office - Assets by Evan Petrov, CC BY 4.0, optimised for THE VEIL"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "f21bec541fa8ab4c",
@@ -4273,7 +4324,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/e3423f6c753041f0a95da030e674aa28",
     "notice": "“VR ready hospital props” (https://sketchfab.com/3d-models/e3423f6c753041f0a95da030e674aa28) by Grish_Avetisyan is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted from the pack, LODs, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "4b5e04ec1a4f3f19",
@@ -4356,7 +4408,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/metal_office_desk"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "355f7da77f5f71ea",
@@ -4439,7 +4492,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/power_box_01"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "a12ac9a4d9899fc4",
@@ -4523,7 +4577,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/e3423f6c753041f0a95da030e674aa28",
     "notice": "“VR ready hospital props” (https://sketchfab.com/3d-models/e3423f6c753041f0a95da030e674aa28) by Grish_Avetisyan is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted from the pack, LODs, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "136c2c268e91fb53",
@@ -4606,7 +4661,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/worn_metal_rack"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "300f62c6c0746c0b",
@@ -4696,7 +4752,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/vintage_radio_transceiver"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "978ba203515b3fbb",
@@ -4780,7 +4837,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/53ccf4413e31441ab20fed8f28cfbf83",
     "notice": "“Hospital Counter / Medical Reception Desk” (https://sketchfab.com/3d-models/53ccf4413e31441ab20fed8f28cfbf83) by Areebacat123 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: rescaled (authored in mm), texture relinked, decimated, LODs, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "cdd15397b3671037",
@@ -4863,7 +4921,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/steel_frame_shelves_01"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "348b1fe58510a88f",
@@ -4946,7 +5005,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/modern_wooden_cabinet"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "08c5dad553724aa1",
@@ -5038,7 +5098,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/dirty-public-toilet-7082a1c21601433d968ea83d33a40c00",
     "notice": "“Dirty Public Toilet” (https://sketchfab.com/3d-models/dirty-public-toilet-7082a1c21601433d968ea83d33a40c00) by lucianofgatto is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: LODs."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "cff23c20bc7fa96b",
@@ -5128,7 +5189,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/paper-towel-dispenser-15c4a2aa81994874a8dfc8038339b08d",
     "notice": "“Paper Towel Dispenser” (https://sketchfab.com/3d-models/paper-towel-dispenser-15c4a2aa81994874a8dfc8038339b08d) by Carolyn Wong is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: rescaled, on the game's surfaces."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "ad4b86b3c03549e9",
@@ -5211,7 +5273,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/Television_01"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "210aa94153eb6c1c",
@@ -5294,7 +5357,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/utility_box_01"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "d4a2b904ae22fd53",
@@ -5385,7 +5449,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/sink-and-vanity-6e20541ed8f543b28d2e71aef79b7b5e",
     "notice": "“Sink and vanity” (https://sketchfab.com/3d-models/sink-and-vanity-6e20541ed8f543b28d2e71aef79b7b5e) by Timothy Ahene is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: LODs."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "181c8f24764e25b5",
@@ -5469,7 +5534,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/e3423f6c753041f0a95da030e674aa28",
     "notice": "“VR ready hospital props” (https://sketchfab.com/3d-models/e3423f6c753041f0a95da030e674aa28) by Grish_Avetisyan is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted from the pack, LODs, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "46de887b8b890e4d",
@@ -5553,7 +5619,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/e3423f6c753041f0a95da030e674aa28",
     "notice": "“VR ready hospital props” (https://sketchfab.com/3d-models/e3423f6c753041f0a95da030e674aa28) by Grish_Avetisyan is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted from the pack, LODs, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "acc96e0f0db7f15e",
@@ -5636,7 +5703,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/WetFloorSign_01"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "c628fb5655b2d861",
@@ -5719,7 +5787,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/wheelchair_01"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "90c7196b4c30095b",
@@ -5790,7 +5859,8 @@
     "draco": false
    },
    "previewUrl": "/models/90c7196b4c30095b.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "cca5f055109f7d2e",
@@ -5861,7 +5931,8 @@
     "draco": false
    },
    "previewUrl": "/models/cca5f055109f7d2e.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "3d76fed12029b2ab",
@@ -5945,7 +6016,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/covered_car"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "2fb876e6e42e6d79",
@@ -6020,7 +6092,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/plastic_crate_02"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "7c5030a460102680",
@@ -6049,7 +6122,8 @@
     "generator": "Blender (stable FBX IO)ß\t"
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "9ee060b2040b4532",
@@ -6120,7 +6194,8 @@
     "draco": false
    },
    "previewUrl": "/models/9ee060b2040b4532.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "dd1b28c43052ba58",
@@ -6191,7 +6266,8 @@
     "draco": false
    },
    "previewUrl": "/models/dd1b28c43052ba58.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "5944a206049bf944",
@@ -6258,7 +6334,8 @@
     "draco": false
    },
    "previewUrl": "/models/5944a206049bf944.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "304727909681007a",
@@ -6349,7 +6426,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/8e200050-3158-4762-b297-f785b5b1533d",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "0e86719cb14248a9",
@@ -6420,7 +6498,8 @@
     "draco": false
    },
    "previewUrl": "/models/0e86719cb14248a9.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "47e549f087d988c7",
@@ -6491,7 +6570,8 @@
     "draco": false
    },
    "previewUrl": "/models/47e549f087d988c7.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "97e6831c135f4ab0",
@@ -6562,7 +6642,8 @@
     "draco": false
    },
    "previewUrl": "/models/97e6831c135f4ab0.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "e0a37b0511c663fb",
@@ -6633,7 +6714,8 @@
     "draco": false
    },
    "previewUrl": "/models/e0a37b0511c663fb.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "7a05fe0ca1f1983b",
@@ -6717,7 +6799,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/office-doors-6515d00b831b461695d01591a5b732fd",
     "notice": "“Office doors” (https://sketchfab.com/3d-models/office-doors-6515d00b831b461695d01591a5b732fd) by Sousinho is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one leaf extracted, fitted to each doorway."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "5374bab8598916a4",
@@ -6808,7 +6891,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/office-doors-6515d00b831b461695d01591a5b732fd",
     "notice": "“Office doors” (https://sketchfab.com/3d-models/office-doors-6515d00b831b461695d01591a5b732fd) by Sousinho is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one leaf extracted, fitted to each doorway."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "32802e8aa3a2e152",
@@ -6892,7 +6976,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/toilet-exit-door-9eff9a6ca32742839b438e07c018c9bf",
     "notice": "“Toilet / exit door” (https://sketchfab.com/3d-models/toilet-exit-door-9eff9a6ca32742839b438e07c018c9bf) by Sousinho is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: rescaled, fitted to the doorway."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "a0a486e6c0ebdf3a",
@@ -6976,7 +7061,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/interior-wooden-door-720c98140848429c985fbd7c77eac70e",
     "notice": "“Interior Wooden Door” (https://sketchfab.com/3d-models/interior-wooden-door-720c98140848429c985fbd7c77eac70e) by joshtmc is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: fitted to each doorway."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "96b1862a205626e2",
@@ -7046,7 +7132,8 @@
     "draco": false
    },
    "previewUrl": "/models/96b1862a205626e2.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "2bf1ab863795e0c9",
@@ -7113,7 +7200,8 @@
     "draco": false
    },
    "previewUrl": "/models/2bf1ab863795e0c9.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "4012788cf494b071",
@@ -7265,7 +7353,8 @@
     "url": "https://www.fab.com/listings/11d20d01-b764-4936-8163-cb20d05c369e",
     "notice": "Hair: “Male Fashion Hair 02” style hair09 by Vincent Freelance (CC BY 4.0, ASSET_INTAKE AI-066), its strands on “Hair Cards” by POLYTRICITY (Sketchfab, CC BY 4.0); fitted to Elias's scalp, recoloured and re-UVed for THE VEIL",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "46833282c3ca118e",
@@ -7416,7 +7505,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/11d20d01-b764-4936-8163-cb20d05c369e",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "c18edbf1bab4006d",
@@ -7568,7 +7658,8 @@
     "url": "https://www.fab.com/listings/11d20d01-b764-4936-8163-cb20d05c369e",
     "notice": "Hair: “Maxwell hair” by Elvaerwyn (MakeHuman Community asset pack hair02_ccby, ASSET_INTAKE AI-050), CC BY (exact version: PENDING — as stated by the pack); fitted to Elias's scalp and recoloured for THE VEIL",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "5bbbd6b7e40279a2",
@@ -7692,7 +7783,8 @@
     "url": "https://www.fab.com/listings/11d20d01-b764-4936-8163-cb20d05c369e",
     "notice": "Hair: “Male Fashion Hair 02” style hair09 by Vincent Freelance (CC BY 4.0, ASSET_INTAKE AI-066), its strands on “Hair Cards” by POLYTRICITY (Sketchfab, CC BY 4.0); fitted to Elias's scalp, recoloured and re-UVed for THE VEIL",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "75563a152d869437",
@@ -7844,7 +7936,8 @@
     "url": "https://www.fab.com/listings/11d20d01-b764-4936-8163-cb20d05c369e",
     "notice": "Hair: “Male Fashion Hair 02” style hair09 by Vincent Freelance (CC BY 4.0, ASSET_INTAKE AI-066), its strands on “Hair Cards” by POLYTRICITY (Sketchfab, CC BY 4.0); fitted to Elias's scalp, recoloured and re-UVed for THE VEIL",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "ab12492cebe22f66",
@@ -7918,7 +8011,8 @@
     "draco": false
    },
    "previewUrl": "/models/ab12492cebe22f66.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "18fd6f10dedf40dc",
@@ -7992,7 +8086,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "e2c06a989d8e1363",
@@ -8066,7 +8161,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "3fea62c19de8d786",
@@ -8136,7 +8232,8 @@
     "draco": false
    },
    "previewUrl": "/models/3fea62c19de8d786.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "20ef248d37745118",
@@ -8209,7 +8306,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "a8980d1ee7576245",
@@ -8283,7 +8381,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "1176137ea7bfdf94",
@@ -8357,7 +8456,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "3838f470185ac2b6",
@@ -8431,7 +8531,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "28ed6af5f6f75e11",
@@ -8501,7 +8602,8 @@
     "draco": false
    },
    "previewUrl": "/models/28ed6af5f6f75e11.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "a99fe003c47d13d5",
@@ -8566,7 +8668,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "5eca025caba95e4b",
@@ -8631,7 +8734,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "6b9d2a03f41a9acf",
@@ -8705,7 +8809,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "60f26e51bf2a7efe",
@@ -8779,7 +8884,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "a4d25ca7204832d6",
@@ -8853,7 +8959,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "f7af7e5509c00654",
@@ -8926,7 +9033,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "08abbe4604e1516f",
@@ -9000,7 +9108,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "ba90f1f74b06edaa",
@@ -9074,7 +9183,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "51e358a29c89b17b",
@@ -9148,7 +9258,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "64e321b8f050397e",
@@ -9222,7 +9333,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "7ecca794addb6b57",
@@ -9296,7 +9408,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "1dc02da711c05b00",
@@ -9370,7 +9483,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "8da28d3f71457439",
@@ -9444,7 +9558,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "42466ff4b349fdd6",
@@ -9509,7 +9624,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "e2d065084fb3596a",
@@ -9583,7 +9699,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "ffd77994ab775ba9",
@@ -9648,7 +9765,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "6cf121f7c379fe59",
@@ -9722,7 +9840,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "e75529c9445a2a9d",
@@ -9796,7 +9915,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "dc94b436aaa3a308",
@@ -9869,7 +9989,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "edaea7be5f903f3c",
@@ -9939,7 +10060,8 @@
     "draco": false
    },
    "previewUrl": "/models/edaea7be5f903f3c.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "4936161f382fdff9",
@@ -10009,7 +10131,8 @@
     "draco": false
    },
    "previewUrl": "/models/4936161f382fdff9.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "e81577204d62e683",
@@ -10083,7 +10206,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "ebca7467a8627504",
@@ -10157,7 +10281,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "a3b30651fe1b68c8",
@@ -10231,7 +10356,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "6df366a7105f62fd",
@@ -10305,7 +10431,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "043866c0058ad821",
@@ -10379,7 +10506,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "d398d70d5fdefc1e",
@@ -10452,7 +10580,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "0a90470570369b96",
@@ -10526,7 +10655,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "488c4ff080092c05",
@@ -10600,7 +10730,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "008eca1f462615e7",
@@ -10674,7 +10805,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "696dea029ce858df",
@@ -10748,7 +10880,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "15e47277202af25a",
@@ -10822,7 +10955,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "e21149c2bf5e5b66",
@@ -10896,7 +11030,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "68a45937c06e8206",
@@ -10970,7 +11105,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "666135e69e635764",
@@ -11065,7 +11201,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "659e80705eaecef5",
@@ -11148,7 +11285,8 @@
     "draco": false
    },
    "previewUrl": "/models/659e80705eaecef5.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "117b58281cfd5dbb",
@@ -11215,7 +11353,8 @@
     "draco": false
    },
    "previewUrl": "/models/117b58281cfd5dbb.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "5dda4d0a22106183",
@@ -11298,7 +11437,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/tree_stump_02"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "d04a0ffc18fe7071",
@@ -11381,7 +11521,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/dead_tree_trunk_02"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "b326f8964e953bda",
@@ -11462,7 +11603,8 @@
     "draco": false
    },
    "previewUrl": "/models/b326f8964e953bda.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "9b4b26336d0d7b6f",
@@ -11529,7 +11671,8 @@
     "draco": false
    },
    "previewUrl": "/models/9b4b26336d0d7b6f.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "cd93c28b5d5dab7e",
@@ -11645,7 +11788,8 @@
     "draco": false
    },
    "previewUrl": "/models/cd93c28b5d5dab7e.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "7769e1eb06f90b47",
@@ -11735,7 +11879,8 @@
     "draco": false
    },
    "previewUrl": "/models/7769e1eb06f90b47.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "856ab64ef03d3dc2",
@@ -11809,7 +11954,8 @@
     "draco": false
    },
    "previewUrl": "/models/856ab64ef03d3dc2.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "cbc11b0375e86006",
@@ -11886,7 +12032,8 @@
     "draco": false
    },
    "previewUrl": "/models/cbc11b0375e86006.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "ea45bf618449a5db",
@@ -11967,7 +12114,8 @@
     "draco": false
    },
    "previewUrl": "/models/ea45bf618449a5db.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "16a0b65df7844ccf",
@@ -12050,7 +12198,8 @@
     "draco": false
    },
    "previewUrl": "/models/16a0b65df7844ccf.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "40f35a9deb7a0137",
@@ -12134,7 +12283,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/mid-century-dining-room-game-ready-eca1dcae26e94bdca36ff4be9f7503a9",
     "notice": "“Mid Century Dining Room - Game-Ready” (https://sketchfab.com/3d-models/mid-century-dining-room-game-ready-eca1dcae26e94bdca36ff4be9f7503a9) by MediaCity Games is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one chair taken out of the set, rescaled, LODs, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "6b8c711490419b85",
@@ -12218,7 +12368,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/mid-century-dining-room-game-ready-eca1dcae26e94bdca36ff4be9f7503a9",
     "notice": "“Mid Century Dining Room - Game-Ready” (https://sketchfab.com/3d-models/mid-century-dining-room-game-ready-eca1dcae26e94bdca36ff4be9f7503a9) by MediaCity Games is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: the table taken out of the set, rescaled, LODs, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "4192d0f1637a5e38",
@@ -12302,7 +12453,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/refrigerator-grey-polished-metal-2071bda681b642218b6829b82e4fd93b",
     "notice": "“Refrigerator - Grey Polished Metal” (https://sketchfab.com/3d-models/refrigerator-grey-polished-metal-2071bda681b642218b6829b82e4fd93b) by Glowbox 3D is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: rescaled, LODs, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "6c5153c5a785f7c5",
@@ -12386,7 +12538,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/realistic-kitchen-scene-2880a251b89e4f0dba4e4c5ae161c0c4",
     "notice": "“Realistic kitchen scene” (https://sketchfab.com/3d-models/realistic-kitchen-scene-2880a251b89e4f0dba4e4c5ae161c0c4) by Katydid (Sketchfab) is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: the south run (base and wall cabinets, range, hood) cut out of the scene, the worktop groceries removed, rescaled, its materials baked into one atlas, LODs."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "bdae52b96a413693",
@@ -12470,7 +12623,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/realistic-kitchen-scene-2880a251b89e4f0dba4e4c5ae161c0c4",
     "notice": "“Realistic kitchen scene” (https://sketchfab.com/3d-models/realistic-kitchen-scene-2880a251b89e4f0dba4e4c5ae161c0c4) by Katydid (Sketchfab) is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: the east run's sink cabinets cut out of the scene, the grocery bag removed, rescaled, its materials baked into one atlas, LODs."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "b16c6e01f1d70f0c",
@@ -12553,7 +12707,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/mid_century_lounge_chair"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "cf5482c2f7fc1e83",
@@ -12644,7 +12799,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/monstera-b02-cb9396f16eef466cad54761c99f64d50",
     "notice": "“Monstera B02” (https://sketchfab.com/3d-models/monstera-b02-cb9396f16eef466cad54761c99f64d50) by MozzarellaARC is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: rescaled, decimated, LODs, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "f296b83c487d064a",
@@ -12727,7 +12883,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/Sofa_01"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "0ddc6d58495bceac",
@@ -12798,7 +12955,8 @@
     "draco": false
    },
    "previewUrl": "/models/0ddc6d58495bceac.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "783015ff444e8f0c",
@@ -12869,7 +13027,8 @@
     "draco": false
    },
    "previewUrl": "/models/783015ff444e8f0c.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "dbb46818d4e91c27",
@@ -12940,7 +13099,8 @@
     "draco": false
    },
    "previewUrl": "/models/dbb46818d4e91c27.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "f413aa51e5789e88",
@@ -13011,7 +13171,8 @@
     "draco": false
    },
    "previewUrl": "/models/f413aa51e5789e88.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "be58fa9f8cc556b6",
@@ -13078,7 +13239,8 @@
     "draco": false
    },
    "previewUrl": "/models/be58fa9f8cc556b6.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "e2c29773b6a66843",
@@ -13145,7 +13307,8 @@
     "draco": false
    },
    "previewUrl": "/models/e2c29773b6a66843.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "63838fbcc21d80b6",
@@ -13170,7 +13333,8 @@
     "compression": "zstd"
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "7f80cdbd9d82c555",
@@ -13241,7 +13405,8 @@
     "draco": false
    },
    "previewUrl": "/models/7f80cdbd9d82c555.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "68f651865f85a6b7",
@@ -13308,7 +13473,8 @@
     "draco": false
    },
    "previewUrl": "/models/68f651865f85a6b7.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "2eea6b8c92dfa1d3",
@@ -13382,7 +13548,8 @@
     "draco": false
    },
    "previewUrl": "/models/2eea6b8c92dfa1d3.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "3d77670aa70b7a90",
@@ -13453,7 +13620,8 @@
     "draco": false
    },
    "previewUrl": "/models/3d77670aa70b7a90.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "e016e1dcbaf228f7",
@@ -13524,7 +13692,8 @@
     "draco": false
    },
    "previewUrl": "/models/e016e1dcbaf228f7.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "653d8d56aa3928e9",
@@ -13608,7 +13777,8 @@
     "draco": false
    },
    "previewUrl": "/models/653d8d56aa3928e9.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "cd8ef0348f72bf88",
@@ -13683,7 +13853,8 @@
     "draco": false
    },
    "previewUrl": "/models/cd8ef0348f72bf88.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "dbc3c875121dc128",
@@ -13712,7 +13883,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "7d537aafbd0409c0",
@@ -13803,7 +13975,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/6885c5f1a68148e1b2b3a4f69b8b3d70",
     "notice": "Quadrocopter 2 by yanix, CC BY 4.0, optimised for THE VEIL"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "a9dc31f9e10299cd",
@@ -13874,7 +14047,8 @@
     "draco": false
    },
    "previewUrl": "/models/a9dc31f9e10299cd.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "adbf2d97e63d4d41",
@@ -13945,7 +14119,8 @@
     "draco": false
    },
    "previewUrl": "/models/adbf2d97e63d4d41.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "a7233f3b5aec9bcd",
@@ -13974,7 +14149,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "9dfd9438517e7a42",
@@ -14045,7 +14221,8 @@
     "draco": false
    },
    "previewUrl": "/models/9dfd9438517e7a42.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "f8a8cf1b452623e3",
@@ -14114,7 +14291,8 @@
     "draco": false
    },
    "previewUrl": "/models/f8a8cf1b452623e3.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "07b6420e2e00306e",
@@ -14184,7 +14362,8 @@
     "draco": false
    },
    "previewUrl": "/models/07b6420e2e00306e.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "c8d3dce048523db8",
@@ -14254,7 +14433,8 @@
     "draco": false
    },
    "previewUrl": "/models/c8d3dce048523db8.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "cc40b72a92cad1ec",
@@ -14324,7 +14504,8 @@
     "draco": false
    },
    "previewUrl": "/models/cc40b72a92cad1ec.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "565013ab3ad23058",
@@ -14394,7 +14575,8 @@
     "draco": false
    },
    "previewUrl": "/models/565013ab3ad23058.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "58d462ecba6f0f57",
@@ -14464,7 +14646,8 @@
     "draco": false
    },
    "previewUrl": "/models/58d462ecba6f0f57.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "bef6672695e7c5e5",
@@ -14534,7 +14717,8 @@
     "draco": false
    },
    "previewUrl": "/models/bef6672695e7c5e5.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "83cf1ecc301590e3",
@@ -14605,7 +14789,8 @@
     "draco": false
    },
    "previewUrl": "/models/83cf1ecc301590e3.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "b64fdba8843b4b3f",
@@ -14676,7 +14861,8 @@
     "draco": false
    },
    "previewUrl": "/models/b64fdba8843b4b3f.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "a78b869d0521b8f3",
@@ -14747,7 +14933,8 @@
     "draco": false
    },
    "previewUrl": "/models/a78b869d0521b8f3.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "1227ca4d10bd9cb7",
@@ -14825,7 +15012,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "923ad78333f4d275",
@@ -14892,7 +15080,8 @@
     "draco": false
    },
    "previewUrl": "/models/923ad78333f4d275.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "44a7194f19486adb",
@@ -14996,7 +15185,8 @@
     "draco": false
    },
    "previewUrl": "/models/44a7194f19486adb.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "9ce6d72bc3e9d874",
@@ -15297,7 +15487,8 @@
     "license": "CC BY 4.0",
     "url": "https://www.fab.com/listings/a06df198-14b9-4264-8ec2-07cde5cc9b90",
     "notice": "“Flat” (https://www.fab.com/listings/a06df198-14b9-4264-8ec2-07cde5cc9b90) by Morozov Konstantin is licensed under Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/). Modified: the bookcase extracted, rescaled, on the game's own surfaces."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "5d9d837e0278747a",
@@ -15473,7 +15664,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "4599cc0c7b7ce182",
@@ -15600,7 +15792,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "b9101cff51d55d72",
@@ -15804,7 +15997,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "3735667f8569f83e",
@@ -16279,7 +16473,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "54739ab0633652fe",
@@ -16469,7 +16664,8 @@
     "draco": false
    },
    "previewUrl": "/models/54739ab0633652fe.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "5f75898442dd42db",
@@ -16540,7 +16736,8 @@
     "draco": false
    },
    "previewUrl": "/models/5f75898442dd42db.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "15182f85a4b0d08b",
@@ -16619,7 +16816,8 @@
     "draco": false
    },
    "previewUrl": "/models/15182f85a4b0d08b.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "6a4e516d995a319b",
@@ -16702,7 +16900,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/water_manhole_cover"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "03045e7c9541945d",
@@ -16811,7 +17010,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "c96afc19defde33a",
@@ -16899,7 +17099,8 @@
     "draco": false
    },
    "previewUrl": "/models/c96afc19defde33a.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "3f36970adfd504e9",
@@ -16974,7 +17175,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/medical_box"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "1e8a168fb33fffa0",
@@ -17003,7 +17205,8 @@
     "generator": "Blender (stable FBX IO) - 4.0.0 - 5.8.12\u0007"
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "3f7e64515fd1155e",
@@ -17070,7 +17273,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "06dd60e1b67bb106",
@@ -17148,7 +17352,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "7688e84170c2ac57",
@@ -17223,7 +17428,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "8e7dc56ee4eb83b3",
@@ -17301,7 +17507,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "21f0f81959d6c192",
@@ -17368,7 +17575,8 @@
     "draco": false
    },
    "previewUrl": "/models/21f0f81959d6c192.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "ac2e2b03cbfa6c4a",
@@ -17439,7 +17647,8 @@
     "draco": false
    },
    "previewUrl": "/models/ac2e2b03cbfa6c4a.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "1a9682bff6310ddf",
@@ -17510,7 +17719,8 @@
     "draco": false
    },
    "previewUrl": "/models/1a9682bff6310ddf.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "ae50311fb9f5023d",
@@ -17539,7 +17749,8 @@
     "generator": "Blender (stable FBX IO) - 4.0.0 - 5.8.12\u0007"
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "84a09416655d7fd1",
@@ -17718,7 +17929,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "446ccda0edc38cba",
@@ -17794,7 +18006,8 @@
     "draco": false
    },
    "previewUrl": "/models/446ccda0edc38cba.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "16255d1f66251b98",
@@ -17861,7 +18074,8 @@
     "draco": false
    },
    "previewUrl": "/models/16255d1f66251b98.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "64b86437af6e0863",
@@ -17932,7 +18146,8 @@
     "draco": false
    },
    "previewUrl": "/models/64b86437af6e0863.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "865c96f9f417e5f2",
@@ -18003,7 +18218,8 @@
     "draco": false
    },
    "previewUrl": "/models/865c96f9f417e5f2.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "8147a044f617eaa0",
@@ -18074,7 +18290,8 @@
     "draco": false
    },
    "previewUrl": "/models/8147a044f617eaa0.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "d80c15897c23ac8b",
@@ -18145,7 +18362,8 @@
     "draco": false
    },
    "previewUrl": "/models/d80c15897c23ac8b.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "fc447cf2914f4a71",
@@ -18219,7 +18437,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "4beda0838ac07f26",
@@ -18248,7 +18467,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "d096341fd42adda2",
@@ -18341,7 +18561,8 @@
     "draco": false
    },
    "previewUrl": "/models/d096341fd42adda2.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "fcba14b13b235fa7",
@@ -18457,7 +18678,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/rigged-game-character-1-0bbafaaffefe477eae9ec20f67cf4883",
     "notice": "“Rigged Game Character 1” (https://sketchfab.com/3d-models/rigged-game-character-1-0bbafaaffefe477eae9ec20f67cf4883) by evan4129 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: retopologised to three LODs, skeleton reduced, retextured (baked atlases), branding removed (glove wordmark and hem tab painted out), mirrored-shell normals fixed, rescaled, Mixamo clips added."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "aab926489966f481",
@@ -18573,7 +18795,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/carla-rigged-001-rigged-3d-business-women-acf520f450d14dd799f98a6fede3edf5",
     "notice": "“Carla Rigged 001 - Rigged 3D Business Women” (https://sketchfab.com/3d-models/carla-rigged-001-rigged-3d-business-women-acf520f450d14dd799f98a6fede3edf5) by Renderpeople is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: decimated to three LODs, skeleton reduced, retargeted, retextured (baked atlases; texture background refilled from the UV islands), Mixamo clips added."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "0a3d7de5122f7701",
@@ -18727,7 +18950,8 @@
     "url": "https://www.fab.com/listings/ebc0bd15-ada8-4df0-9401-c2d3d8c551dc",
     "notice": "Mop: “Pair of mops” by Sousinho (Sketchfab, CC BY 4.0), the clean one, decimated and held for THE VEIL",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "443e496b23910efe",
@@ -18817,7 +19041,8 @@
     "draco": false
    },
    "previewUrl": "/models/443e496b23910efe.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "926dd47c30ae87b6",
@@ -18958,7 +19183,8 @@
     "source": "Mixamo",
     "license": "Mixamo licence",
     "url": "https://www.mixamo.com/"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "a42ceb2aeff46f1a",
@@ -19048,7 +19274,8 @@
     "draco": false
    },
    "previewUrl": "/models/a42ceb2aeff46f1a.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "3612fcc962c40e7b",
@@ -19193,7 +19420,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/8e200050-3158-4762-b297-f785b5b1533d",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "ebf0c5f7fd2991ba",
@@ -19338,7 +19566,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/8e200050-3158-4762-b297-f785b5b1533d",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "73e5743f12037ca7",
@@ -19428,7 +19657,8 @@
     "draco": false
    },
    "previewUrl": "/models/73e5743f12037ca7.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "bb13c91f0dba3a9a",
@@ -19580,7 +19810,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/ebc0bd15-ada8-4df0-9401-c2d3d8c551dc",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "95e987e53f63dc62",
@@ -19706,7 +19937,8 @@
     "source": "Mixamo",
     "license": "Mixamo licence",
     "url": "https://www.mixamo.com/"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "12032fa2999a262e",
@@ -19839,7 +20071,8 @@
     "source": "Mixamo",
     "license": "Mixamo licence",
     "url": "https://www.mixamo.com/"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "77e2ff362b6d552c",
@@ -19941,7 +20174,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "d6d3b5306350fd0a",
@@ -20055,7 +20289,8 @@
     "license": "Mixamo licence",
     "url": "https://www.mixamo.com/",
     "notice": "Umbrella: “Elegant umbrella” by araon (Sketchfab, CC BY), decimated and recoloured for THE VEIL"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "8d9afdd553156066",
@@ -20169,7 +20404,8 @@
     "license": "Mixamo licence",
     "url": "https://www.mixamo.com/",
     "notice": "Umbrella: “Elegant umbrella” by araon (Sketchfab, CC BY), decimated and recoloured for THE VEIL"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "150433490ba16081",
@@ -20283,7 +20519,8 @@
     "license": "Mixamo licence",
     "url": "https://www.mixamo.com/",
     "notice": "Umbrella: “Elegant umbrella” by araon (Sketchfab, CC BY), decimated and recoloured for THE VEIL"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "5c418c0d23b78cff",
@@ -20366,7 +20603,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "1694e67b70b312d8",
@@ -20449,7 +20687,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "7e39382731ecc873",
@@ -20532,7 +20771,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "c01d04c3ae01e7da",
@@ -20615,7 +20855,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "7021d13c938e373b",
@@ -20698,7 +20939,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "4fac8722a1157eec",
@@ -20781,7 +21023,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "b54fecc4dfb61d27",
@@ -20864,7 +21107,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "214a545079d7fe8e",
@@ -20947,7 +21191,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "1bad5f749ecee449",
@@ -21030,7 +21275,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "e929d619e220f4a7",
@@ -21113,7 +21359,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "6c465a33444f80cf",
@@ -21196,7 +21443,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "88d4ef8422a651da",
@@ -21279,7 +21527,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "864286aef48cc9f7",
@@ -21362,7 +21611,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "3f1e7cb67b8cb3cb",
@@ -21445,7 +21695,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "08999ee5f1d3f4b9",
@@ -21528,7 +21779,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "ba5dcf122b3b5faa",
@@ -21611,7 +21863,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "2804a80b548045ff",
@@ -21694,7 +21947,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/a2442500-d061-4b60-8d38-8dd4898120ab",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "facebdbdb9d1e4ed",
@@ -21778,7 +22032,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e",
     "notice": "“Office Props Pack” (https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e) by crazyshroomz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted, rescaled, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "f47d8a8d0ef78458",
@@ -21862,7 +22117,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e",
     "notice": "“Office Props Pack” (https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e) by crazyshroomz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted, rescaled, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "16a7719330964338",
@@ -21946,7 +22202,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e",
     "notice": "“Office Props Pack” (https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e) by crazyshroomz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted, rescaled, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "6af77a68d317ffa2",
@@ -22030,7 +22287,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e",
     "notice": "“Office Props Pack” (https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e) by crazyshroomz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted, rescaled, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "fdb24a433b7b2ce9",
@@ -22114,7 +22372,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e",
     "notice": "“Office Props Pack” (https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e) by crazyshroomz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted, rescaled, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "0108dc39d3b9d916",
@@ -22198,7 +22457,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e",
     "notice": "“Office Props Pack” (https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e) by crazyshroomz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted, rescaled, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "3190e5f1d6c91070",
@@ -22282,7 +22542,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e",
     "notice": "“Office Props Pack” (https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e) by crazyshroomz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted, rescaled, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "efd9cbd6d032fe35",
@@ -22366,7 +22627,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e",
     "notice": "“Office Props Pack” (https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e) by crazyshroomz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted, rescaled, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "942db33778134b76",
@@ -22450,7 +22712,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e",
     "notice": "“Office Props Pack” (https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e) by crazyshroomz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted, rescaled, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "4ce81141163b75f1",
@@ -22534,7 +22797,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e",
     "notice": "“Office Props Pack” (https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e) by crazyshroomz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted, rescaled, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "3aa8bce38ebe6e83",
@@ -22618,7 +22882,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e",
     "notice": "“Office Props Pack” (https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e) by crazyshroomz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted, rescaled, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "81264d8e0aa4a59c",
@@ -22702,7 +22967,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e",
     "notice": "“Office Props Pack” (https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e) by crazyshroomz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted, rescaled, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "d5bd414afbe5c705",
@@ -22786,7 +23052,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e",
     "notice": "“Office Props Pack” (https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e) by crazyshroomz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted, rescaled, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "fb681b640bc92b0c",
@@ -22870,7 +23137,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e",
     "notice": "“Office Props Pack” (https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e) by crazyshroomz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted, rescaled, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "20154e035cc1085d",
@@ -22954,7 +23222,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e",
     "notice": "“Office Props Pack” (https://sketchfab.com/3d-models/260ff7a37a674505903708a0dc513e7e) by crazyshroomz is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one prop extracted, rescaled, textures to 1K."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "a21127131ed915ba",
@@ -23130,7 +23399,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "f8d6d5231b7e7650",
@@ -23197,7 +23467,8 @@
     "draco": false
    },
    "previewUrl": "/models/f8d6d5231b7e7650.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "8ef98c09ba941b42",
@@ -23268,7 +23539,8 @@
     "draco": false
    },
    "previewUrl": "/models/8ef98c09ba941b42.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "943493b9192ae3dd",
@@ -23339,7 +23611,8 @@
     "draco": false
    },
    "previewUrl": "/models/943493b9192ae3dd.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "7ed054486dcfb892",
@@ -23422,7 +23695,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/painted_wooden_bench"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "54974fedd61f3727",
@@ -23493,7 +23767,8 @@
     "draco": false
    },
    "previewUrl": "/models/54974fedd61f3727.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "72b261b3a24190ea",
@@ -23564,7 +23839,8 @@
     "draco": false
    },
    "previewUrl": "/models/72b261b3a24190ea.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "784d71b2a1199a73",
@@ -23635,7 +23911,8 @@
     "draco": false
    },
    "previewUrl": "/models/784d71b2a1199a73.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "e15aeef4e32d9557",
@@ -23709,7 +23986,8 @@
     "draco": false
    },
    "previewUrl": "/models/e15aeef4e32d9557.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "409178ff397684e8",
@@ -23792,7 +24070,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/service_pistol"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "b58c586461b7f76b",
@@ -23875,7 +24154,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/service_pistol"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "3cd0cc3140787540",
@@ -23949,7 +24229,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "9e42ee9912efd7f8",
@@ -24092,7 +24373,8 @@
     "license": "CC BY 4.0",
     "url": "https://www.fab.com/listings/009451b7-15f4-4a95-a29b-cfbc55b23d89",
     "notice": "“Police car” (https://www.fab.com/listings/009451b7-15f4-4a95-a29b-cfbc55b23d89) by SpatialNeglect is licensed under Creative Commons Attribution 4.0 (https://creativecommons.org/licenses/by/4.0/). Modified: debadged, light bar split into red/blue lens parts, LODs, optimised."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "9a158dbc59b200c2",
@@ -24163,7 +24445,8 @@
     "draco": false
    },
    "previewUrl": "/models/9a158dbc59b200c2.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "e9ccaf00a952e0e5",
@@ -24234,7 +24517,8 @@
     "draco": false
    },
    "previewUrl": "/models/e9ccaf00a952e0e5.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "9de5eaadf981e3a0",
@@ -24318,7 +24602,8 @@
     "draco": false
    },
    "previewUrl": "/models/9de5eaadf981e3a0.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "79b4a61298de9fb1",
@@ -24399,7 +24684,8 @@
     "draco": false
    },
    "previewUrl": "/models/79b4a61298de9fb1.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "9a38ab830423a900",
@@ -24482,7 +24768,8 @@
     "draco": false
    },
    "previewUrl": "/models/9a38ab830423a900.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "4cb868e673b64e80",
@@ -24553,7 +24840,8 @@
     "draco": false
    },
    "previewUrl": "/models/4cb868e673b64e80.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "9138b16239d43464",
@@ -24624,7 +24912,8 @@
     "draco": false
    },
    "previewUrl": "/models/9138b16239d43464.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "7218d7020e6a97a4",
@@ -24694,7 +24983,8 @@
     "draco": false
    },
    "previewUrl": "/models/7218d7020e6a97a4.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "d05c579e7a211726",
@@ -24764,7 +25054,8 @@
     "draco": false
    },
    "previewUrl": "/models/d05c579e7a211726.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "be8ff4208cd3642a",
@@ -24834,7 +25125,8 @@
     "draco": false
    },
    "previewUrl": "/models/be8ff4208cd3642a.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "135b3d375aa9f11b",
@@ -24904,7 +25196,8 @@
     "draco": false
    },
    "previewUrl": "/models/135b3d375aa9f11b.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "e4c1f277041ab94b",
@@ -24974,7 +25267,8 @@
     "draco": false
    },
    "previewUrl": "/models/e4c1f277041ab94b.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "43a014164f03b286",
@@ -25044,7 +25338,8 @@
     "draco": false
    },
    "previewUrl": "/models/43a014164f03b286.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "ff5675df22d91e00",
@@ -25114,7 +25409,8 @@
     "draco": false
    },
    "previewUrl": "/models/ff5675df22d91e00.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "ff4c319d995f849c",
@@ -25184,7 +25480,8 @@
     "draco": false
    },
    "previewUrl": "/models/ff4c319d995f849c.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "b7210a2c0f8c77af",
@@ -25254,7 +25551,8 @@
     "draco": false
    },
    "previewUrl": "/models/b7210a2c0f8c77af.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "e991df2de7265763",
@@ -25324,7 +25622,8 @@
     "draco": false
    },
    "previewUrl": "/models/e991df2de7265763.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "b0502e7ff824d040",
@@ -25394,7 +25693,8 @@
     "draco": false
    },
    "previewUrl": "/models/b0502e7ff824d040.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "6c71170f9e610b8b",
@@ -25464,7 +25764,8 @@
     "draco": false
    },
    "previewUrl": "/models/6c71170f9e610b8b.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "fe5bc9512bd4c229",
@@ -25534,7 +25835,8 @@
     "draco": false
    },
    "previewUrl": "/models/fe5bc9512bd4c229.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "7176769883825579",
@@ -25604,7 +25906,8 @@
     "draco": false
    },
    "previewUrl": "/models/7176769883825579.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "6ab5d5eecf4eb44c",
@@ -25674,7 +25977,8 @@
     "draco": false
    },
    "previewUrl": "/models/6ab5d5eecf4eb44c.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "33452fc23bba0bfd",
@@ -25744,7 +26048,8 @@
     "draco": false
    },
    "previewUrl": "/models/33452fc23bba0bfd.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "e1f79c1948b85f17",
@@ -25814,7 +26119,8 @@
     "draco": false
    },
    "previewUrl": "/models/e1f79c1948b85f17.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "1219602cecdc69f2",
@@ -25884,7 +26190,8 @@
     "draco": false
    },
    "previewUrl": "/models/1219602cecdc69f2.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "d121e34acf971f9f",
@@ -25954,7 +26261,8 @@
     "draco": false
    },
    "previewUrl": "/models/d121e34acf971f9f.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "827e4f91cbb74e51",
@@ -26025,7 +26333,8 @@
     "draco": false
    },
    "previewUrl": "/models/827e4f91cbb74e51.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "4f3df2f33ca64e88",
@@ -26096,7 +26405,8 @@
     "draco": false
    },
    "previewUrl": "/models/4f3df2f33ca64e88.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "371179ec5b2af384",
@@ -26163,7 +26473,8 @@
     "draco": false
    },
    "previewUrl": "/models/371179ec5b2af384.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "54b2232670e65454",
@@ -26230,7 +26541,8 @@
     "draco": false
    },
    "previewUrl": "/models/54b2232670e65454.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "158d9f447675a220",
@@ -26299,7 +26611,8 @@
     "draco": false
    },
    "previewUrl": "/models/158d9f447675a220.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "378de63b7f9ff2a0",
@@ -26375,7 +26688,8 @@
     "draco": false
    },
    "previewUrl": "/models/378de63b7f9ff2a0.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "da6b64cdc53d9683",
@@ -26456,7 +26770,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "bb5dacbb37376bd5",
@@ -26537,7 +26852,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "d0d0265282fc47d6",
@@ -26618,7 +26934,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "10e2c6947f008a8d",
@@ -26692,7 +27009,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "7b8df3dcf412cec4",
@@ -26773,7 +27091,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "e04d01fbcee85b4f",
@@ -26854,7 +27173,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "67b9ee2554c27bb5",
@@ -26925,7 +27245,8 @@
     "draco": false
    },
    "previewUrl": "/models/67b9ee2554c27bb5.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "7f662149fc6d9d3c",
@@ -26996,7 +27317,8 @@
     "draco": false
    },
    "previewUrl": "/models/7f662149fc6d9d3c.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "673d163e79897ac7",
@@ -27079,7 +27401,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/concrete_road_barrier_02"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "883d7342f95cd5c4",
@@ -27108,7 +27431,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "29f520dbdd7d59c8",
@@ -27137,7 +27461,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "7fdd28a0eae5ddcb",
@@ -27166,7 +27491,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "c7d4caf24e11430d",
@@ -27233,7 +27559,8 @@
     "draco": false
    },
    "previewUrl": "/models/c7d4caf24e11430d.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "6c2668ba85b4d54d",
@@ -27304,7 +27631,8 @@
     "draco": false
    },
    "previewUrl": "/models/6c2668ba85b4d54d.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "55385acb63337025",
@@ -27378,7 +27706,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "af66dd1914dd1f26",
@@ -27451,7 +27780,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "7ca56022e845fd28",
@@ -27521,7 +27851,8 @@
     "draco": false
    },
    "previewUrl": "/models/7ca56022e845fd28.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "8bc89112425fa6ea",
@@ -27591,7 +27922,8 @@
     "draco": false
    },
    "previewUrl": "/models/8bc89112425fa6ea.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "e67efff314b49d00",
@@ -27661,7 +27993,8 @@
     "draco": false
    },
    "previewUrl": "/models/e67efff314b49d00.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "a9f789e6a9b97093",
@@ -27735,7 +28068,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "a6694d27aa2c18e9",
@@ -27805,7 +28139,8 @@
     "draco": false
    },
    "previewUrl": "/models/a6694d27aa2c18e9.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "c0852810b57409bb",
@@ -27879,7 +28214,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "70525e1ec2974cdb",
@@ -27949,7 +28285,8 @@
     "draco": false
    },
    "previewUrl": "/models/70525e1ec2974cdb.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "c2944ca6e0d2c94f",
@@ -28019,7 +28356,8 @@
     "draco": false
    },
    "previewUrl": "/models/c2944ca6e0d2c94f.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "c95f6df0020fca81",
@@ -28089,7 +28427,8 @@
     "draco": false
    },
    "previewUrl": "/models/c95f6df0020fca81.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "3b447b6490f2c52f",
@@ -28162,7 +28501,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "dad2a6ca4dd4cbdd",
@@ -28232,7 +28572,8 @@
     "draco": false
    },
    "previewUrl": "/models/dad2a6ca4dd4cbdd.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "4251c5063ac229fa",
@@ -28302,7 +28643,8 @@
     "draco": false
    },
    "previewUrl": "/models/4251c5063ac229fa.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "069068b8496c917d",
@@ -28372,7 +28714,8 @@
     "draco": false
    },
    "previewUrl": "/models/069068b8496c917d.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "cd36578a69dfb90f",
@@ -28442,7 +28785,8 @@
     "draco": false
    },
    "previewUrl": "/models/cd36578a69dfb90f.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "05136cbaff71a91a",
@@ -28512,7 +28856,8 @@
     "draco": false
    },
    "previewUrl": "/models/05136cbaff71a91a.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "516656a1263fb7ac",
@@ -28582,7 +28927,8 @@
     "draco": false
    },
    "previewUrl": "/models/516656a1263fb7ac.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "fe9530a0e3f366c5",
@@ -28656,7 +29002,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "5675a6d189e9122c",
@@ -28730,7 +29077,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "6314b836353e6498",
@@ -28800,7 +29148,8 @@
     "draco": false
    },
    "previewUrl": "/models/6314b836353e6498.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "d176e8c1dd4325b5",
@@ -28870,7 +29219,8 @@
     "draco": false
    },
    "previewUrl": "/models/d176e8c1dd4325b5.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "d8b34adf6581eaaf",
@@ -28940,7 +29290,8 @@
     "draco": false
    },
    "previewUrl": "/models/d8b34adf6581eaaf.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "a6632171825d4652",
@@ -29014,7 +29365,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "0d2c6e2338dcfa60",
@@ -29088,7 +29440,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "b60c47981852e2fa",
@@ -29162,7 +29515,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "87387a85b2fa2aef",
@@ -29232,7 +29586,8 @@
     "draco": false
    },
    "previewUrl": "/models/87387a85b2fa2aef.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "f412a6027a4887d7",
@@ -29302,7 +29657,8 @@
     "draco": false
    },
    "previewUrl": "/models/f412a6027a4887d7.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "b8ea8ca3315ccb38",
@@ -29372,7 +29728,8 @@
     "draco": false
    },
    "previewUrl": "/models/b8ea8ca3315ccb38.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "e192c118d255114d",
@@ -29442,7 +29799,8 @@
     "draco": false
    },
    "previewUrl": "/models/e192c118d255114d.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "023020a769252d78",
@@ -29512,7 +29870,8 @@
     "draco": false
    },
    "previewUrl": "/models/023020a769252d78.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "8d3a9ffde4276675",
@@ -29582,7 +29941,8 @@
     "draco": false
    },
    "previewUrl": "/models/8d3a9ffde4276675.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "86195493ba2c3a7d",
@@ -29655,7 +30015,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "12cbc1810ff97c43",
@@ -29725,7 +30086,8 @@
     "draco": false
    },
    "previewUrl": "/models/12cbc1810ff97c43.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "46a945e65a7a854e",
@@ -29795,7 +30157,8 @@
     "draco": false
    },
    "previewUrl": "/models/46a945e65a7a854e.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "f2793471690c3bee",
@@ -29865,7 +30228,8 @@
     "draco": false
    },
    "previewUrl": "/models/f2793471690c3bee.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "ac5bafeed7c11bfd",
@@ -29935,7 +30299,8 @@
     "draco": false
    },
    "previewUrl": "/models/ac5bafeed7c11bfd.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "1e8e87580c111d81",
@@ -30005,7 +30370,8 @@
     "draco": false
    },
    "previewUrl": "/models/1e8e87580c111d81.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "b7fc6b71d243be71",
@@ -30075,7 +30441,8 @@
     "draco": false
    },
    "previewUrl": "/models/b7fc6b71d243be71.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "3b1cb4399abca560",
@@ -30145,7 +30512,8 @@
     "draco": false
    },
    "previewUrl": "/models/3b1cb4399abca560.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "db9a093d8673baf5",
@@ -30218,7 +30586,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "3d94888e589a29db",
@@ -30288,7 +30657,8 @@
     "draco": false
    },
    "previewUrl": "/models/3d94888e589a29db.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "5539cdb65a10818a",
@@ -30358,7 +30728,8 @@
     "draco": false
    },
    "previewUrl": "/models/5539cdb65a10818a.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "955ee8291029ca5f",
@@ -30428,7 +30799,8 @@
     "draco": false
    },
    "previewUrl": "/models/955ee8291029ca5f.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "586731f769ef84eb",
@@ -30502,7 +30874,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "a17608fec59acc32",
@@ -30575,7 +30948,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "019958c71512504b",
@@ -30645,7 +31019,8 @@
     "draco": false
    },
    "previewUrl": "/models/019958c71512504b.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "468cff290dfce507",
@@ -30715,7 +31090,8 @@
     "draco": false
    },
    "previewUrl": "/models/468cff290dfce507.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "ce07f704be3a88bc",
@@ -30785,7 +31161,8 @@
     "draco": false
    },
    "previewUrl": "/models/ce07f704be3a88bc.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "6bc6df7e5ab0d8a5",
@@ -30859,7 +31236,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "a74d138e41596d56",
@@ -30932,7 +31310,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "60f68bf739e4e8c5",
@@ -31006,7 +31385,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "2ef0c5db99defa09",
@@ -31080,7 +31460,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "82d700458431d00b",
@@ -31154,7 +31535,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "52a31dbb1e02213e",
@@ -31228,7 +31610,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "db37325b2c8eb65a",
@@ -31298,7 +31681,8 @@
     "draco": false
    },
    "previewUrl": "/models/db37325b2c8eb65a.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "254e68cc60aa2847",
@@ -31368,7 +31752,8 @@
     "draco": false
    },
    "previewUrl": "/models/254e68cc60aa2847.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "4efe4dfdd2303065",
@@ -31438,7 +31823,8 @@
     "draco": false
    },
    "previewUrl": "/models/4efe4dfdd2303065.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "419326a8f9a76d83",
@@ -31544,7 +31930,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "6f7de2df5193df58",
@@ -31627,7 +32014,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/service_pistol"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "f9efed86221ec48b",
@@ -31656,7 +32044,8 @@
     "generator": "Blender (stable FBX IO) - 4.0.0 - 5.8.12\u0007"
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "d727e808c0f7972d",
@@ -31685,7 +32074,8 @@
     "generator": "Blender (stable FBX IO)ã\t"
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "c3b9fe82b334cf6a",
@@ -31828,7 +32218,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/shvan-92-low-poly-model-09d718c9cf72401b8534d265a06a803f",
     "notice": "\"Shvan '92 - Low poly model\" (https://sketchfab.com/3d-models/shvan-92-low-poly-model-09d718c9cf72401b8534d265a06a803f) by Daniel Zhabotinsky is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: badges and wordmarks removed, number plates blanked, rescaled, LODs and collider added."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "26062f42ed554dd3",
@@ -31907,7 +32298,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/91421509-0588-4da2-bc17-595e9670d6ff",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "acfeb5ae3e40ccfb",
@@ -31986,7 +32378,8 @@
     "license": "Fab Standard",
     "url": "https://www.fab.com/listings/91421509-0588-4da2-bc17-595e9670d6ff",
     "restricted": true
-   }
+   },
+   "thumb": true
   },
   {
    "id": "ad4c69dabd1df2ff",
@@ -32482,7 +32875,8 @@
     "draco": false
    },
    "previewUrl": "/models/ad4c69dabd1df2ff.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "ad9571bc3ccebc0b",
@@ -32549,7 +32943,8 @@
     "draco": false
    },
    "previewUrl": "/models/ad9571bc3ccebc0b.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "4d2bf1af8e367f61",
@@ -32620,7 +33015,8 @@
     "draco": false
    },
    "previewUrl": "/models/4d2bf1af8e367f61.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "9aa7a456782d156f",
@@ -32691,7 +33087,8 @@
     "draco": false
    },
    "previewUrl": "/models/9aa7a456782d156f.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "adae79b1da29456e",
@@ -32758,7 +33155,8 @@
     "draco": false
    },
    "previewUrl": "/models/adae79b1da29456e.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "47cc21d1a55dc477",
@@ -32836,7 +33234,8 @@
     "draco": false
    },
    "previewUrl": "/models/47cc21d1a55dc477.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "25484a3b2fe6fd4b",
@@ -32903,7 +33302,8 @@
     "draco": false
    },
    "previewUrl": "/models/25484a3b2fe6fd4b.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "b0145835759b073d",
@@ -33030,7 +33430,8 @@
     "draco": false
    },
    "previewUrl": "/models/b0145835759b073d.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "0f9206e766e6476f",
@@ -33059,7 +33460,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "dcc3a5b960b229a9",
@@ -33088,7 +33490,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "fca6c3f14633ecf3",
@@ -33117,7 +33520,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "264465e442c315b4",
@@ -33146,7 +33550,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "9cd6c04f80d1c6c1",
@@ -33232,7 +33637,8 @@
     "draco": false
    },
    "previewUrl": "/models/9cd6c04f80d1c6c1.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "21368774e5fc5231",
@@ -33323,7 +33729,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/old-paper-cardboard-boxes-72a4804f8a4d4de18e59abb60b81c54f",
     "notice": "“Old Paper & Cardboard Boxes” (https://sketchfab.com/3d-models/old-paper-cardboard-boxes-72a4804f8a4d4de18e59abb60b81c54f) by TooManyDemons is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: rescaled."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "c9d31c69b4976dc9",
@@ -33394,7 +33801,8 @@
     "draco": false
    },
    "previewUrl": "/models/c9d31c69b4976dc9.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "77e10c2400dcfe23",
@@ -33477,7 +33885,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/plastic_crate_01"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "f1f7f0dc921a945e",
@@ -33596,7 +34005,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/generic-passenger-car-pack-20f9af9b8a404d5cb022ac6fe87f21f5",
     "notice": "\"Generic passenger car pack\" (https://sketchfab.com/3d-models/generic-passenger-car-pack-20f9af9b8a404d5cb022ac6fe87f21f5) by Comrade1280 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one body extracted, rescaled, LODs and collider added."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "3cb5825fb982f448",
@@ -33667,7 +34077,8 @@
     "draco": false
    },
    "previewUrl": "/models/3cb5825fb982f448.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "eb73e729397723f6",
@@ -33786,7 +34197,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/generic-passenger-car-pack-20f9af9b8a404d5cb022ac6fe87f21f5",
     "notice": "\"Generic passenger car pack\" (https://sketchfab.com/3d-models/generic-passenger-car-pack-20f9af9b8a404d5cb022ac6fe87f21f5) by Comrade1280 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one body extracted, rescaled, LODs and collider added."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "28fc717051dff193",
@@ -33869,7 +34281,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/modular_street_seating"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "808efafa71ee301d",
@@ -33988,7 +34401,8 @@
     "license": "CC BY 4.0",
     "url": "https://sketchfab.com/3d-models/generic-passenger-car-pack-20f9af9b8a404d5cb022ac6fe87f21f5",
     "notice": "\"Generic passenger car pack\" (https://sketchfab.com/3d-models/generic-passenger-car-pack-20f9af9b8a404d5cb022ac6fe87f21f5) by Comrade1280 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). Modified: one body extracted, rescaled, LODs and collider added."
-   }
+   },
+   "thumb": true
   },
   {
    "id": "94ead09139e7a511",
@@ -34085,7 +34499,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/jacaranda_tree"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "7ee7eb15da376f28",
@@ -34159,7 +34574,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "939e83ecc2837505",
@@ -34237,7 +34653,8 @@
     "draco": false
    },
    "previewUrl": "/models/939e83ecc2837505.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "778fb432f9b47e77",
@@ -34311,7 +34728,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "56997c1c15e18cb1",
@@ -34385,7 +34803,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "3b09e0dca497aeff",
@@ -34459,7 +34878,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "2f1cc3b6f4f4dded",
@@ -34533,7 +34953,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "436af301d5894bb0",
@@ -34607,7 +35028,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "f729dc41be08cb78",
@@ -34681,7 +35103,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "168031b2f69d6cca",
@@ -34755,7 +35178,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "be135a2a87c138b6",
@@ -34861,7 +35285,8 @@
     "draco": false
    },
    "previewUrl": "/models/be135a2a87c138b6.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "d3a5684b19959e5e",
@@ -34935,7 +35360,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "5b858ce3e2e9d112",
@@ -35009,7 +35435,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "7de12a7f8caf6a0e",
@@ -35083,7 +35510,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "8931ec839619c4a0",
@@ -35157,7 +35585,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "4472a4e2d151e607",
@@ -35231,7 +35660,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "5db5b4a650cd74f4",
@@ -35305,7 +35735,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "2eefd9b17e13c728",
@@ -35379,7 +35810,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "9967cbc820a37cd4",
@@ -35449,7 +35881,8 @@
     "draco": false
    },
    "previewUrl": "/models/9967cbc820a37cd4.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "35686396c5b9a233",
@@ -35523,7 +35956,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "696cbfac19eb5e15",
@@ -35597,7 +36031,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "cc012af600b3902c",
@@ -35671,7 +36106,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "104143c7280719bd",
@@ -35745,7 +36181,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "675eff1a2ce39967",
@@ -35819,7 +36256,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "f31cbe890d6621fd",
@@ -35893,7 +36331,8 @@
    "credit": {
     "source": "Meshy (AI)",
     "license": "Project-owned"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "e72ca5fe310b1810",
@@ -35984,7 +36423,8 @@
     "draco": false
    },
    "previewUrl": "/models/e72ca5fe310b1810.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "3db1301c7393f1cb",
@@ -36013,7 +36453,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "9113bba925fd9a34",
@@ -36042,7 +36483,8 @@
     "generator": "Blender (stable FBX IO)ã\t"
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "9ecd16b31e12e17b",
@@ -36113,7 +36555,8 @@
     "draco": false
    },
    "previewUrl": "/models/9ecd16b31e12e17b.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "88f53a8f4c7b88a5",
@@ -36180,7 +36623,8 @@
     "draco": false
    },
    "previewUrl": "/models/88f53a8f4c7b88a5.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "c9a56edcf18887e7",
@@ -36251,7 +36695,8 @@
     "draco": false
    },
    "previewUrl": "/models/c9a56edcf18887e7.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "c896e1eb5e3dc64a",
@@ -36322,7 +36767,8 @@
     "draco": false
    },
    "previewUrl": "/models/c896e1eb5e3dc64a.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "5ff1f7022666f993",
@@ -36389,7 +36835,8 @@
     "draco": false
    },
    "previewUrl": "/models/5ff1f7022666f993.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "cc6a350e10bd3041",
@@ -36458,7 +36905,8 @@
     "draco": false
    },
    "previewUrl": "/models/cc6a350e10bd3041.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "c40c5cfde9908af6",
@@ -36541,7 +36989,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/trashbag"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "52a7bc87008d1827",
@@ -36608,7 +37057,8 @@
     "draco": false
    },
    "previewUrl": "/models/52a7bc87008d1827.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "aacb8b3f664dfc02",
@@ -36686,7 +37136,8 @@
     "draco": false
    },
    "previewUrl": "/models/aacb8b3f664dfc02.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "45867ba4a3a5b4be",
@@ -36769,7 +37220,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/metal_trash_can"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "1339f17ad0616a9c",
@@ -36852,7 +37304,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/metal_trash_can"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "3e3e027de6ab10ec",
@@ -36881,7 +37334,8 @@
     "generator": "Blender (stable FBX IO) - 4.4.0 - 5.12.7¤\u0007"
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "3a6b5f573379bff5",
@@ -36948,7 +37402,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "d93ca35017a75b8e",
@@ -36977,7 +37432,8 @@
     "generator": "Blender (stable FBX IO) - 4.4.0 - 5.12.7¤\u0007"
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "ce93efb866a316bd",
@@ -37044,7 +37500,8 @@
     "draco": false
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "96514cf0934273d0",
@@ -37111,7 +37568,8 @@
     "draco": false
    },
    "previewUrl": "/models/96514cf0934273d0.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "7c002ff0f7e2c351",
@@ -37182,7 +37640,8 @@
     "draco": false
    },
    "previewUrl": "/models/7c002ff0f7e2c351.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "5178ac3e13c2a924",
@@ -37263,7 +37722,8 @@
     "draco": false
    },
    "previewUrl": "/models/5178ac3e13c2a924.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "2016fa3d1f512c45",
@@ -37330,7 +37790,8 @@
     "draco": false
    },
    "previewUrl": "/models/2016fa3d1f512c45.glb",
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "11c6b96560501bf4",
@@ -37359,7 +37820,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "fc0c649458dd5c6f",
@@ -37388,7 +37850,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "a93ba990541cec4f",
@@ -37417,7 +37880,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "9eaa8b1f62c9b12f",
@@ -37492,7 +37956,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/combination_wrench"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "fcd1e1cac198bbf6",
@@ -37575,7 +38040,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/security_light"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "5d51d0fbece52257",
@@ -37659,7 +38125,8 @@
     "source": "Poly Haven",
     "license": "CC0",
     "url": "https://polyhaven.com/a/portable_generator"
-   }
+   },
+   "thumb": true
   },
   {
    "id": "38c447b8ce498037",
@@ -37688,7 +38155,8 @@
     "generator": "Blender (stable FBX IO) - 4.0.0 - 5.8.12\u0007"
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": true
   },
   {
    "id": "bbebe8cc03aabf07",
@@ -37717,7 +38185,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "e24cc295dd3feb44",
@@ -37746,7 +38215,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "16683f7753b3e98a",
@@ -37775,7 +38245,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "7aff3ed582843a93",
@@ -37804,7 +38275,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "1ee7d59fdd8b9eda",
@@ -37833,7 +38305,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "6d926ce9892fd568",
@@ -37862,7 +38335,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "f6f474a15c8df783",
@@ -37891,7 +38365,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "02993595dea6be01",
@@ -37920,7 +38395,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "e37a11406843a80f",
@@ -37949,7 +38425,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "21b8263fc9811d2f",
@@ -37978,7 +38455,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   },
   {
    "id": "8d5089a4ec8f879f",
@@ -38007,7 +38485,8 @@
     "generator": null
    },
    "previewUrl": null,
-   "credit": null
+   "credit": null,
+   "thumb": false
   }
  ]
 }

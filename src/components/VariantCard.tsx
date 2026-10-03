@@ -31,7 +31,7 @@ export function VariantCard({ variants }: { variants: Model[] }) {
   const dialog = useRef<HTMLDialogElement>(null);
 
   const sorted = [...variants].sort(
-    (a, b) => Number(Boolean(b.previewUrl)) - Number(Boolean(a.previewUrl)) || (b.triangles ?? 0) - (a.triangles ?? 0)
+    (a, b) => Number(Boolean(b.thumb)) - Number(Boolean(a.thumb)) || (b.triangles ?? 0) - (a.triangles ?? 0)
   );
   const lead = sorted[0];
   const credit = sorted.find((m) => m.credit)?.credit;
@@ -128,10 +128,10 @@ export function VariantCard({ variants }: { variants: Model[] }) {
                 className="flex items-center gap-4 px-6 py-4 transition-colors hover:bg-raise"
               >
                 <div className="relative size-16 shrink-0 overflow-hidden rounded-lg bg-raise">
-                  {m.previewUrl ? (
+                  {m.thumb ? (
                     <Image src={`/thumbs/${m.id}.webp`} alt="" fill sizes="64px" className="object-contain p-1.5" />
                   ) : (
-                    <FormatPlate format={m.format} />
+                    <FormatPlate model={m} compact />
                   )}
                 </div>
                 <div className="min-w-0 flex-1">

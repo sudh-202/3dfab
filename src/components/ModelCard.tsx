@@ -8,25 +8,47 @@ import { CreditLine } from "./Credit";
 import { bytes, count } from "@/lib/format";
 import type { Model } from "@/lib/models";
 
+/** Why a file has no still: what the card says instead of a picture. */
+function plateNote(model: Model) {
+  const d = model.detail;
+  if (model.triangles) return `${count(model.triangles)} tris`;
+  if (model.format === "fbx" && d.hasAnimation && !d.hasSkin) return "animation only · no mesh";
+  if (model.format === "blend") return d.objects != null ? `${d.objects} objects` : "Blender scene";
+  return d.parsed ? "no geometry" : "not parsed";
+}
+
 /**
  * Files we cannot render in a browser still deserve a real card. The plate
- * draws an empty bounding box with the format in the middle — it reads as
- * "indexed, not viewable" rather than as a broken image.
+ * draws the bounding-box glyph in the accent, the format large, and what we
+ * do know about the file — it reads as "indexed, no picture", not as a broken
+ * image. `compact` is the 64px version used in variant lists.
  */
-export function FormatPlate({ format }: { format: string }) {
+export function FormatPlate({ model, compact = false }: { model: Model; compact?: boolean }) {
+  if (compact) {
+    return (
+      <div className="absolute inset-0 grid place-items-center bg-sel-soft">
+        <span className="label text-[9px] text-sel">.{model.format}</span>
+      </div>
+    );
+  }
   return (
-    <div className="absolute inset-0 grid place-items-center">
-      <svg viewBox="0 0 120 120" className="absolute inset-0 size-full text-line" fill="none" aria-hidden>
-        <path d="M60 22 96 42v36L60 98 24 78V42z" stroke="currentColor" strokeWidth="1" strokeDasharray="3 4" />
+    <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-[radial-gradient(circle_at_50%_42%,var(--sel-soft),transparent_62%)]">
+      <svg viewBox="0 0 120 120" className="size-[38%] max-h-28 text-sel" fill="none" aria-hidden>
+        <path d="M60 18 98 40v40L60 102 22 80V40z" stroke="currentColor" strokeOpacity=".55" strokeWidth="1.2" strokeDasharray="4 4" />
+        <path d="M22 40 60 62 98 40M60 62v40" stroke="currentColor" strokeOpacity=".3" strokeWidth="1" strokeDasharray="4 4" />
       </svg>
-      <span className="label relative z-10 text-[10px] text-faint">.{format}</span>
+      <div className="text-center">
+        <p className="num text-[22px] uppercase leading-none tracking-wide text-ink">.{model.format}</p>
+        <p className="num mt-2 text-[11px] text-dim">{plateNote(model)}</p>
+        <p className="label mt-1.5 text-[9px] text-faint">{model.collection}</p>
+      </div>
     </div>
   );
 }
 
 /** Shaded thumbnail that crossfades to its wireframe pass while `wire` is true. */
 export function Thumb({ model, wire, sizes }: { model: Model; wire: boolean; sizes: string }) {
-  if (!model.previewUrl) return <FormatPlate format={model.format} />;
+  if (!model.thumb) return <FormatPlate model={model} />;
   return (
     <>
       <Image

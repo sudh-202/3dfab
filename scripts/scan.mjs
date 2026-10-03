@@ -207,6 +207,9 @@ function main() {
     }
   }
 
+  // Thumbnails are rendered by thumbs.mjs from the source file, bundled or not.
+  for (const r of records) r.thumb = fs.existsSync(path.join(ROOT, "public/thumbs", `${r.id}.webp`));
+
   records.sort((a, b) => a.name.localeCompare(b.name));
 
   const collections = {};
@@ -235,6 +238,13 @@ function main() {
   };
 
   fs.writeFileSync(path.join(OUT_DATA, "models.json"), JSON.stringify(index, null, 1));
+
+  // Local-only map of id → file on disk, so thumbs.mjs can render models whose
+  // file is not bundled. Gitignored: machine paths never reach the shipped index.
+  fs.writeFileSync(
+    path.join(OUT_DATA, "sources.local.json"),
+    JSON.stringify(Object.fromEntries(sourceOf), null, 1)
+  );
 
   const mb = (n) => `${(n / 1e6).toFixed(1)} MB`;
   console.log(

@@ -63,6 +63,28 @@ function ktx2For(gl: THREE.WebGLRenderer) {
   return ktx2;
 }
 
+/**
+ * Game-ready exports can carry helpers the game hides at runtime: collision
+ * hulls (COL_/UCX_, The Veil's extras.veil_collider) and coarser LODs stacked on
+ * the main mesh (extras.veil_lod). Drawn, a hull is an opaque box hiding the
+ * model, so they are removed before display.
+ */
+function stripHelpers(root: THREE.Group) {
+  // Keep the finest LOD present: a texture-variant export may start at lod1.
+  let finest = Infinity;
+  root.traverse((o) => {
+    if (typeof o.userData?.veil_lod === "number") finest = Math.min(finest, o.userData.veil_lod);
+  });
+  const drop: THREE.Object3D[] = [];
+  root.traverse((o) => {
+    const u = o.userData ?? {};
+    const coarser = typeof u.veil_lod === "number" && u.veil_lod > finest;
+    if (o !== root && (u.veil_collider || coarser || /^(COL|UCX)_/.test(o.name))) drop.push(o);
+  });
+  drop.forEach((o) => o.removeFromParent());
+  return root;
+}
+
 function Model({
   url,
   shading,
@@ -85,7 +107,7 @@ function Model({
   // fighting over the same materials. A plain clone() leaves skinned meshes
   // bound to the cached skeleton, so clips would drive bones nobody renders;
   // SkeletonUtils rebinds skins to the copied bones.
-  const scene = useMemo(() => cloneSkeleton(gltf.scene) as THREE.Group, [gltf.scene]);
+  const scene = useMemo(() => stripHelpers(cloneSkeleton(gltf.scene) as THREE.Group), [gltf.scene]);
   const group = useRef<THREE.Group>(null);
   const { actions, mixer } = useAnimations(gltf.animations, group);
 

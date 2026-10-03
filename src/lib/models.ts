@@ -86,6 +86,8 @@ export interface Model {
   textureCount: number | null;
   detail: ModelDetail;
   previewUrl: string | null;
+  /** A still exists in public/thumbs — rendered from the source even when the file is not bundled. */
+  thumb?: boolean;
   credit?: Credit | null;
 }
 

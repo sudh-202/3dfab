@@ -62,7 +62,14 @@ export default async function ModelPage({ params }: { params: Promise<{ id: stri
           {model.previewUrl ? (
             <Viewer url={model.previewUrl} className="aspect-[16/10] w-full" />
           ) : (
-            <NoPreview format={model.format} bytesOnDisk={model.bytes} credit={model.credit} />
+            <NoPreview
+              id={model.id}
+              name={model.name}
+              thumb={Boolean(model.thumb)}
+              format={model.format}
+              bytesOnDisk={model.bytes}
+              credit={model.credit}
+            />
           )}
 
           <header className="mt-8 flex flex-wrap items-start justify-between gap-5">
@@ -129,7 +136,7 @@ export default async function ModelPage({ params }: { params: Promise<{ id: stri
                     className="flex items-center gap-4 rounded-lg border border-line-soft bg-raise/50 p-3 transition-colors hover:border-line"
                   >
                     <div className="relative size-16 shrink-0 overflow-hidden rounded-md bg-raise">
-                      {v.previewUrl && (
+                      {v.thumb && (
                         <Image src={`/thumbs/${v.id}.webp`} alt="" fill sizes="64px" className="object-contain p-1.5" />
                       )}
                     </div>
@@ -275,7 +282,7 @@ export default async function ModelPage({ params }: { params: Promise<{ id: stri
             {related.map((r) => (
               <Link key={r.id} href={`/model/${r.id}`} className="group overflow-hidden rounded-xl border border-line-soft bg-panel transition-colors hover:border-line">
                 <div className="relative aspect-square bg-raise">
-                  {r.previewUrl ? (
+                  {r.thumb ? (
                     <Image src={`/thumbs/${r.id}.webp`} alt={r.name} fill sizes="12vw" className="object-contain p-2" />
                   ) : (
                     <span className="label absolute inset-0 grid place-items-center text-[9px]">.{r.format}</span>
@@ -292,30 +299,50 @@ export default async function ModelPage({ params }: { params: Promise<{ id: stri
 }
 
 function NoPreview({
+  id,
+  name,
+  thumb,
   format,
   bytesOnDisk,
   credit,
 }: {
+  id: string;
+  name: string;
+  thumb: boolean;
   format: string;
   bytesOnDisk: number;
   credit?: Credit | null;
 }) {
+  const why =
+    format === "fbx"
+      ? "FBX is indexed from its header but not loaded in the live viewer."
+      : format === "blend"
+        ? "Blender scenes are indexed from their block table but not rendered here."
+        : credit?.restricted
+          ? `Its licence (${credit.license ?? "private use"}) does not allow redistributing the file, so it is indexed but not hosted here.`
+          : `This ${bytes(bytesOnDisk)} file is outside the preview bundle, which is capped per file and in total.`;
+
+  // A still rendered from the source file stands in for the live viewer.
+  if (thumb) {
+    return (
+      <figure className="overflow-hidden rounded-xl border border-line-soft bg-panel">
+        <div className="relative aspect-[16/10] w-full bg-raise">
+          <Image src={`/thumbs/${id}.webp`} alt={name} fill priority sizes="(max-width: 1024px) 100vw, 66vw" className="object-contain p-6" />
+        </div>
+        <figcaption className="border-t border-line-soft px-5 py-3 text-[12.5px] leading-relaxed text-faint">
+          <span className="text-dim">Still image — no live viewer.</span> {why}
+        </figcaption>
+      </figure>
+    );
+  }
+
   return (
     <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-3 rounded-xl border border-line-soft bg-panel px-6 text-center">
       <svg viewBox="0 0 120 120" className="size-24 text-line" fill="none" aria-hidden>
         <path d="M60 22 96 42v36L60 98 24 78V42z" stroke="currentColor" strokeWidth="1.2" strokeDasharray="4 5" />
       </svg>
       <p className="display text-lg text-dim">No browser preview</p>
-      <p className="max-w-sm text-[13.5px] leading-relaxed text-faint">
-        {format === "fbx"
-          ? "FBX is indexed from its header but not rendered here."
-          : format === "blend"
-            ? "Blender scenes are indexed from their block table but not rendered here."
-            : credit?.restricted
-              ? `Its licence (${credit.license ?? "private use"}) does not allow redistributing the file, so it is indexed but not hosted here.`
-              : `This ${bytes(bytesOnDisk)} file is outside the preview bundle, which is capped per file and in total.`}{" "}
-        The full spec is on the right.
-      </p>
+      <p className="max-w-sm text-[13.5px] leading-relaxed text-faint">{why} The full spec is on the right.</p>
     </div>
   );
 }

@@ -42,3 +42,4 @@ next-env.d.ts
 
 # Local scan roots contain machine paths; keep the example, ignore the real one.
 /scripts/roots.json
+/data/sources.local.json
