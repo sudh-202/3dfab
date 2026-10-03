@@ -69,7 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="mt-28 border-t border-line-soft">
           <div className="mx-auto flex max-w-[1440px] flex-col gap-3 px-5 py-10 text-xs text-faint sm:flex-row sm:items-center sm:justify-between sm:px-8">
             <p>
-              Free to download and use — no attribution required. Made with Fable 5 &amp; 5.1, GPT
+              Free to download and use — no attribution required unless a model credits its author. Made with Fable 5 &amp; 5.1, GPT
               Astra and GPT Sole.
             </p>
             <p className="num">

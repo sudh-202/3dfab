@@ -11,6 +11,7 @@
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Center, Grid, OrbitControls, useAnimations, useGLTF } from "@react-three/drei";
 import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
+import { KTX2Loader } from "three/examples/jsm/loaders/KTX2Loader.js";
 import { clone as cloneSkeleton } from "three/examples/jsm/utils/SkeletonUtils.js";
 import { Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import * as THREE from "three";
@@ -51,6 +52,17 @@ function useCheckerTexture() {
   }, []);
 }
 
+/**
+ * One KTX2 (Basis) transcoder for the page. Some projects ship
+ * KHR_texture_basisu textures, which GLTFLoader refuses to read without it.
+ * The transcoder lives in public/basis/, copied from three's examples.
+ */
+let ktx2: KTX2Loader | null = null;
+function ktx2For(gl: THREE.WebGLRenderer) {
+  ktx2 ??= new KTX2Loader().setTranscoderPath("/basis/").detectSupport(gl);
+  return ktx2;
+}
+
 function Model({
   url,
   shading,
@@ -62,7 +74,11 @@ function Model({
   clip: string | null;
   onScene: (info: { clips: string[]; radius: number }) => void;
 }) {
-  const gltf = useGLTF(url, "/draco/", true);
+  const gl = useThree((s) => s.gl);
+  const gltf = useGLTF(url, "/draco/", true, (loader) =>
+    // drei types its loader from three-stdlib; three's own KTX2Loader is call-compatible.
+    loader.setKTX2Loader(ktx2For(gl) as unknown as Parameters<typeof loader.setKTX2Loader>[0])
+  );
   const checker = useCheckerTexture();
 
   // useGLTF caches per URL, so a fresh graph per mount keeps two viewers from

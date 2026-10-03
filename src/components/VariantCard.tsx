@@ -3,8 +3,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { Badge, CardBody, CardShell, FormatPlate, Thumb } from "./ModelCard";
+import { Badge, CARD_ACTION, CardBody, CardShell, FormatPlate, Thumb } from "./ModelCard";
 import { WeightDot } from "./BudgetMeter";
+import { CreditLine } from "./Credit";
 import { bytes, count } from "@/lib/format";
 import type { Model } from "@/lib/models";
 
@@ -33,6 +34,7 @@ export function VariantCard({ variants }: { variants: Model[] }) {
     (a, b) => Number(Boolean(b.previewUrl)) - Number(Boolean(a.previewUrl)) || (b.triangles ?? 0) - (a.triangles ?? 0)
   );
   const lead = sorted[0];
+  const credit = sorted.find((m) => m.credit)?.credit;
 
   const open = () => dialog.current?.showModal();
   const close = () => dialog.current?.close();
@@ -58,37 +60,40 @@ export function VariantCard({ variants }: { variants: Model[] }) {
 
   return (
     <>
-      <button
-        type="button"
-        onClick={open}
-        className="block h-full w-full rounded-xl text-left focus-visible:outline-2 focus-visible:outline-sel"
-        onFocus={() => setWire(true)}
-        onBlur={() => setWire(false)}
-        aria-haspopup="dialog"
+      <CardShell
+        onHover={setWire}
+        action={
+          <button
+            type="button"
+            onClick={open}
+            aria-label={`${lead.name} — ${variants.length} variants`}
+            className={CARD_ACTION}
+            onFocus={() => setWire(true)}
+            onBlur={() => setWire(false)}
+            aria-haspopup="dialog"
+          />
+        }
+        footer={credit && <CreditLine credit={credit} />}
+        media={
+          <>
+            <Thumb model={lead} wire={wire} sizes={SIZES} />
+            <div className="absolute left-3 top-3 flex gap-1">
+              <Badge title={`${variants.length} exports of this asset`}>
+                <span className="inline-flex items-center gap-1">
+                  <LayersIcon />
+                  {variants.length} variants
+                </span>
+              </Badge>
+              {sorted.some((m) => m.animationCount !== 0) && <Badge title="Has animation clips">anim</Badge>}
+            </div>
+            <span className="num absolute right-3 top-3 rounded-md bg-void/80 px-1.5 py-0.5 text-[10px] uppercase text-dim backdrop-blur-sm">
+              {[...new Set(sorted.map((m) => m.format))].join(" · ")}
+            </span>
+          </>
+        }
       >
-        <CardShell
-          onHover={setWire}
-          media={
-            <>
-              <Thumb model={lead} wire={wire} sizes={SIZES} />
-              <div className="absolute left-3 top-3 flex gap-1">
-                <Badge title={`${variants.length} exports of this asset`}>
-                  <span className="inline-flex items-center gap-1">
-                    <LayersIcon />
-                    {variants.length} variants
-                  </span>
-                </Badge>
-                {sorted.some((m) => m.animationCount !== 0) && <Badge title="Has animation clips">anim</Badge>}
-              </div>
-              <span className="num absolute right-3 top-3 rounded-md bg-void/80 px-1.5 py-0.5 text-[10px] uppercase text-dim backdrop-blur-sm">
-                {[...new Set(sorted.map((m) => m.format))].join(" · ")}
-              </span>
-            </>
-          }
-        >
-          <CardBody model={lead} subtitle={`${trisRange} · ${variants.length} exports · ${lead.collection}`} />
-        </CardShell>
-      </button>
+        <CardBody model={lead} subtitle={`${trisRange} · ${variants.length} exports · ${lead.collection}`} />
+      </CardShell>
 
       <dialog
         ref={dialog}

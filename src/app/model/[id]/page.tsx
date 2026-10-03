@@ -2,7 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import dynamic from "next/dynamic";
-import { getModel, models, relatedModels, variantsOf, WEIGHT_LABEL, WEIGHT_RANGE } from "@/lib/models";
+import {
+  getModel,
+  models,
+  needsAttribution,
+  relatedModels,
+  variantsOf,
+  WEIGHT_LABEL,
+  WEIGHT_RANGE,
+  type Credit,
+} from "@/lib/models";
 import { BudgetMeter, WeightDot } from "@/components/BudgetMeter";
 import { bytes, count, date, dim, exact, relativeDate } from "@/lib/format";
 
@@ -53,7 +62,7 @@ export default async function ModelPage({ params }: { params: Promise<{ id: stri
           {model.previewUrl ? (
             <Viewer url={model.previewUrl} className="aspect-[16/10] w-full" />
           ) : (
-            <NoPreview format={model.format} bytesOnDisk={model.bytes} />
+            <NoPreview format={model.format} bytesOnDisk={model.bytes} credit={model.credit} />
           )}
 
           <header className="mt-8 flex flex-wrap items-start justify-between gap-5">
@@ -76,7 +85,11 @@ export default async function ModelPage({ params }: { params: Promise<{ id: stri
                   </svg>
                   Download .{model.format}
                 </a>
-                <p className="text-[11.5px] text-faint">Free to use · no attribution required</p>
+                <p className="text-[11.5px] text-faint">
+                  {needsAttribution(model.credit)
+                    ? `Free to use · credit the author (${model.credit?.license})`
+                    : "Free to use · no attribution required"}
+                </p>
               </div>
             )}
           </header>
@@ -180,6 +193,8 @@ export default async function ModelPage({ params }: { params: Promise<{ id: stri
 
         {/* Spec column */}
         <aside className="space-y-4 lg:sticky lg:top-24 lg:self-start">
+          {model.credit && <CreditPanel credit={model.credit} />}
+
           <Panel title="Geometry">
             <Row k="Triangles" v={exact(model.triangles)} />
             <Row k="Vertices" v={exact(model.vertices)} />
@@ -276,7 +291,15 @@ export default async function ModelPage({ params }: { params: Promise<{ id: stri
   );
 }
 
-function NoPreview({ format, bytesOnDisk }: { format: string; bytesOnDisk: number }) {
+function NoPreview({
+  format,
+  bytesOnDisk,
+  credit,
+}: {
+  format: string;
+  bytesOnDisk: number;
+  credit?: Credit | null;
+}) {
   return (
     <div className="flex aspect-[16/10] w-full flex-col items-center justify-center gap-3 rounded-xl border border-line-soft bg-panel px-6 text-center">
       <svg viewBox="0 0 120 120" className="size-24 text-line" fill="none" aria-hidden>
@@ -288,10 +311,50 @@ function NoPreview({ format, bytesOnDisk }: { format: string; bytesOnDisk: numbe
           ? "FBX is indexed from its header but not rendered here."
           : format === "blend"
             ? "Blender scenes are indexed from their block table but not rendered here."
-            : `This ${bytes(bytesOnDisk)} file is above the preview size cap.`}{" "}
+            : credit?.restricted
+              ? `Its licence (${credit.license ?? "private use"}) does not allow redistributing the file, so it is indexed but not hosted here.`
+              : `This ${bytes(bytesOnDisk)} file is outside the preview bundle, which is capped per file and in total.`}{" "}
         The full spec is on the right.
       </p>
     </div>
+  );
+}
+
+/** Who made it, where it came from, and the notice the licence asks for. */
+function CreditPanel({ credit }: { credit: Credit }) {
+  return (
+    <Panel title="Credit">
+      {credit.author && <Row k="Author" v={credit.author} />}
+      {credit.source && (
+        <div className="flex items-baseline justify-between gap-3 py-1.5">
+          <span className="shrink-0 text-[13px] text-faint">Source</span>
+          {credit.url ? (
+            <a
+              href={credit.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="num min-w-0 truncate text-right text-[13px] text-sel hover:underline hover:underline-offset-2"
+              title={credit.url}
+            >
+              {credit.source} ↗
+            </a>
+          ) : (
+            <span className="num min-w-0 truncate text-right text-[13px] text-ink">{credit.source}</span>
+          )}
+        </div>
+      )}
+      {credit.license && <Row k="Licence" v={credit.license} />}
+      {credit.notice && (
+        <p className="mt-2.5 border-t border-line-soft pt-2.5 text-[11.5px] leading-relaxed text-dim">
+          {credit.notice}
+        </p>
+      )}
+      {credit.restricted && (
+        <p className="mt-2.5 text-[11px] leading-relaxed text-faint">
+          Private-use licence — listed for reference; the file is not offered for download.
+        </p>
+      )}
+    </Panel>
   );
 }
 

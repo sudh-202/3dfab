@@ -24,6 +24,7 @@ const MIME = {
   ".glb": "model/gltf-binary",
   ".gltf": "model/gltf+json",
   ".js": "text/javascript",
+  ".wasm": "application/wasm",
   ".html": "text/html",
 };
 
@@ -58,6 +59,7 @@ const PAGE = `<!doctype html><meta charset="utf-8">
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
+import { KTX2Loader } from "three/addons/loaders/KTX2Loader.js";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { MeshoptDecoder } from "three/addons/libs/meshopt_decoder.module.js";
 
@@ -87,6 +89,9 @@ const draco = new DRACOLoader();
 draco.setDecoderPath("/three/examples/jsm/libs/draco/");
 loader.setDRACOLoader(draco);
 loader.setMeshoptDecoder(MeshoptDecoder);
+// KHR_texture_basisu (KTX2) textures, as shipped by The Veil.
+const ktx2 = new KTX2Loader().setTranscoderPath("/three/examples/jsm/libs/basis/").detectSupport(renderer);
+loader.setKTX2Loader(ktx2);
 
 let current = null;
 

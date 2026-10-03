@@ -182,7 +182,8 @@ export function LibraryBrowser({ models }: { models: Model[] }) {
       if (weights.length && !weights.includes(m.weight)) return false;
       if (flags.length && !flags.every((f) => matchesFlag(m, f))) return false;
       if (!terms.length) return true;
-      const hay = `${m.name} ${m.fileName} ${m.group} ${m.collection}`.toLowerCase();
+      const c = m.credit;
+      const hay = `${m.name} ${m.fileName} ${m.group} ${m.collection} ${c?.author ?? ""} ${c?.source ?? ""} ${c?.license ?? ""}`.toLowerCase();
       return terms.every((t) => hay.includes(t));
     });
     const by: Record<Sort, (a: Model, b: Model) => number> = {

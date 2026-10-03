@@ -47,6 +47,25 @@ export interface ModelDetail {
   compression?: string | null;
 }
 
+/**
+ * Who made a model and under what licence, read from the source project's own
+ * asset manifest at scan time. Absent when the project records no third party.
+ */
+export interface Credit {
+  author?: string;
+  /** Where it came from: "Sketchfab", "Poly Haven", "Meshy (AI)"… */
+  source?: string;
+  license?: string;
+  url?: string;
+  /** Full attribution notice, as the source project records it. */
+  notice?: string;
+  /** Private-use licence: indexed here, but the file is not redistributed. */
+  restricted?: boolean;
+}
+
+/** A licence that obliges whoever reuses the file to credit the author. */
+export const needsAttribution = (c?: Credit | null) => Boolean(c?.license && /\bBY\b/.test(c.license));
+
 export interface Model {
   id: string;
   name: string;
@@ -67,6 +86,7 @@ export interface Model {
   textureCount: number | null;
   detail: ModelDetail;
   previewUrl: string | null;
+  credit?: Credit | null;
 }
 
 export interface Library {

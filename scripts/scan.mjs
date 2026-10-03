@@ -13,6 +13,7 @@ import path from "node:path";
 import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { parseGltfLike, parseFbx, parseBlend, EXTENSIONS, titleize } from "./parse.mjs";
+import { loadCredits } from "./credits.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, "scripts/roots.json"), "utf8"));
@@ -21,14 +22,19 @@ const COPY = !process.argv.includes("--no-copy");
 const OUT_DATA = path.join(ROOT, "data");
 const OUT_MODELS = path.join(ROOT, "public/models");
 
-/** Directory names, plus a couple of path fragments, we never descend into. */
-function ignored(p) {
-  return CONFIG.ignore.some((frag) =>
+/**
+ * Directory names, plus a couple of path fragments, we never descend into.
+ * A root can add its own (`"ignore": [...]` on the root) — e.g. a game's
+ * assets-src/, which holds the Blender sources and raw generations behind the
+ * files it actually ships.
+ */
+function ignored(p, extra = []) {
+  return [...CONFIG.ignore, ...extra].some((frag) =>
     frag.startsWith("/") ? p.includes(frag) : path.basename(p) === frag
   );
 }
 
-function walk(dir, out = [], depth = 0) {
+function walk(dir, out = [], depth = 0, extra = []) {
   if (depth > 12) return out;
   let entries;
   try {
@@ -39,8 +45,8 @@ function walk(dir, out = [], depth = 0) {
   for (const e of entries) {
     if (e.name.startsWith(".")) continue;
     const full = path.join(dir, e.name);
-    if (ignored(full)) continue;
-    if (e.isDirectory()) walk(full, out, depth + 1);
+    if (ignored(full, extra)) continue;
+    if (e.isDirectory()) walk(full, out, depth + 1, extra);
     else if (e.isFile() && EXTENSIONS.has(path.extname(e.name).toLowerCase())) out.push(full);
   }
   return out;
@@ -95,8 +101,12 @@ function main() {
       console.warn(`  ! offline, skipped: ${root.label} (${root.path})`);
       continue;
     }
-    const files = walk(root.path);
-    console.log(`  ${String(files.length).padStart(4)}  ${root.label}`);
+    const files = walk(root.path, [], 0, root.ignore ?? []);
+    const credits = loadCredits(root.path, root.credits);
+    console.log(
+      `  ${String(files.length).padStart(4)}  ${root.label}` +
+        (credits.size ? ` (${credits.size} credited files in manifest)` : "")
+    );
 
     for (const file of files) {
       let stat;
@@ -106,13 +116,17 @@ function main() {
         continue;
       }
       const fp = fingerprint(file, stat.size);
+      const rel = path.relative(root.path, file);
+      const credit = credits.get(rel.split(path.sep).join("/")) ?? null;
       if (seen.has(fp)) {
-        seen.get(fp).duplicateCount++;
+        const kept = seen.get(fp);
+        kept.duplicateCount++;
+        // Same bytes, same provenance: a copy's manifest row credits the kept record too.
+        if (credit && !kept.credit) kept.credit = credit;
         continue;
       }
 
       const ext = path.extname(file).toLowerCase();
-      const rel = path.relative(root.path, file);
       const format = ext.slice(1);
 
       let detail = { parsed: false };
@@ -139,6 +153,7 @@ function main() {
         textureCount: detail.textureCount ?? null,
         detail,
         previewUrl: null,
+        credit,
       };
       seen.set(fp, record);
       sourceOf.set(fp, file);
@@ -146,17 +161,32 @@ function main() {
     }
   }
 
-  // Previewable files get copied in, smallest first, until the budget runs out.
+  // Previewable files get copied in until the budget runs out. Files bundled by
+  // the previous scan keep their place, so adding a project never evicts
+  // models that already had a viewer; new files then fill what is left,
+  // smallest first. A private-use licence (credit.restricted) is never copied:
+  // the file is indexed, not redistributed.
   let copied = 0;
   let copiedBytes = 0;
   if (COPY) {
     const { maxFileBytes, maxTotalBytes } = CONFIG.bundle;
+    let bundledBefore = new Set();
+    try {
+      const prev = JSON.parse(fs.readFileSync(path.join(OUT_DATA, "models.json"), "utf8"));
+      bundledBefore = new Set(prev.models.filter((m) => m.previewUrl).map((m) => m.id));
+    } catch {
+      /* first scan */
+    }
     const candidates = records
       .filter((r) => (r.format === "glb" || r.format === "gltf") && r.bytes <= maxFileBytes)
-      .sort((a, b) => a.bytes - b.bytes);
+      .filter((r) => !r.credit?.restricted)
+      .sort(
+        (a, b) =>
+          Number(bundledBefore.has(b.id)) - Number(bundledBefore.has(a.id)) || a.bytes - b.bytes
+      );
 
     for (const r of candidates) {
-      if (copiedBytes + r.bytes > maxTotalBytes) break;
+      if (copiedBytes + r.bytes > maxTotalBytes) continue;
       const dest = path.join(OUT_MODELS, `${r.id}.${r.format}`);
       try {
         if (!fs.existsSync(dest) || fs.statSync(dest).size !== r.bytes) {

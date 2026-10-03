@@ -22,7 +22,7 @@ export default function Home() {
           <p className="mt-7 max-w-xl text-[16px] leading-relaxed text-dim">
             {totals.models} models across {collections.length} projects. Triangle counts, bounding
             boxes, materials and rigs come out of the files themselves. Open any model, inspect it
-            in the browser, and download it — free to use, no attribution required.
+            in the browser, and download it — free to use, with credit where a model names its author.
           </p>
 
           <dl className="mt-12 flex flex-wrap gap-x-12 gap-y-6">
